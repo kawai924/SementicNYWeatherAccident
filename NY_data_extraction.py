@@ -34,7 +34,7 @@ def NYdata():
 
     # print(NYalldata)
     # filter out the certain type
-    #test to see if i can push to master
+    # changed: test to see if i can push to master
     targetlist = ['TAVG','AWND', 'WESF']
     final = NYalldata[NYalldata["datatype"].isin(targetlist)]
     # print(NYalldata[NYalldata[2].isin(targetlist)])
