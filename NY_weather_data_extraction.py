@@ -1,10 +1,11 @@
-
 import pandas as pd
+
+import converter.example_converter as conv
 
 def NYdata():
     # with open('data/NY_stations_id.txt', 'r') as f:
     #     data = f.read()
-    df = pd.read_csv('data/NY_stations_id.txt')
+    df = pd.read_csv('data/csv/NY_stations_id.txt')
     # print(df)
     listdf = list(df.GHCND)
 
@@ -49,4 +50,7 @@ def NYdata():
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    NYdata()
+    #NYdata()
+    print('Converting csv into rdf...')
+    conv.start()
+    print('Done :)')
