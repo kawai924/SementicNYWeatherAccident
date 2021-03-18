@@ -1,6 +1,7 @@
 import pandas as pd
 
 import converter.example_converter as conv
+import converter.accident_converter as accident
 
 def NYdata():
     # with open('data/NY_stations_id.txt', 'r') as f:
@@ -52,5 +53,6 @@ def NYdata():
 if __name__ == '__main__':
     #NYdata()
     print('Converting csv into rdf...')
-    conv.start()
+    # conv.start()
+    accident.convert_to_rdf('data/csv/Motor_Vehicle_Collisions_-_Crashes.csv', 'data/rdf/accident.rdf')
     print('Done :)')

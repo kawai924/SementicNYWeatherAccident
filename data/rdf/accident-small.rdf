@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:vocab="http://github.com/kawai924/SementicNYWeatherAccident/vocabulary/"
+  xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/resource/4358053">
+    <vocab:pedestrians_killed rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</vocab:pedestrians_killed>
+    <vocab:contributing_factor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unspecified</vocab:contributing_factor_2>
+    <vocab:vehicle_type_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Station Wagon/Sport Utility Vehicle</vocab:vehicle_type_1>
+    <vocab:zip rdf:datatype="http://www.w3.org/2001/XMLSchema#int">nan</vocab:zip>
+    <vocab:persons_killed rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</vocab:persons_killed>
+    <vocab:street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BELT PARKWAY                    </vocab:street>
+    <vocab:vehicle_type_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Station Wagon/Sport Utility Vehicle</vocab:vehicle_type_2>
+    <vocab:borough rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nan</vocab:borough>
+    <vocab:pedestrians_injured rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</vocab:pedestrians_injured>
+    <vocab:contributing_factor_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Following Too Closely</vocab:contributing_factor_1>
+    <vocab:persons_injured rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</vocab:persons_injured>
+    <geo:Point>
+      <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#4358053">
+        <geo:long rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-73.77181</geo:long>
+        <geo:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#double">40.667366</geo:lat>
+      </rdf:Description>
+    </geo:Point>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4358053</rdfs:label>
+    <vocab:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10/15/2020</vocab:date>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/resource/4356755">
+    <geo:Point>
+      <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#4356755">
+        <geo:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#double">40.862747</geo:lat>
+        <geo:long rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-73.90494</geo:long>
+      </rdf:Description>
+    </geo:Point>
+    <vocab:zip rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10468.0</vocab:zip>
+    <vocab:contributing_factor_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Failure to Yield Right-of-Way</vocab:contributing_factor_1>
+    <vocab:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10/09/2020</vocab:date>
+    <vocab:persons_injured rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</vocab:persons_injured>
+    <vocab:vehicle_type_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sedan</vocab:vehicle_type_1>
+    <vocab:street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WEST FORDHAM ROAD               </vocab:street>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4356755</rdfs:label>
+    <vocab:persons_killed rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</vocab:persons_killed>
+    <vocab:vehicle_type_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sedan</vocab:vehicle_type_2>
+    <vocab:pedestrians_injured rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</vocab:pedestrians_injured>
+    <vocab:borough rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BRONX</vocab:borough>
+    <vocab:pedestrians_killed rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</vocab:pedestrians_killed>
+    <vocab:contributing_factor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unspecified</vocab:contributing_factor_2>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/resource/4366976">
+    <vocab:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10/21/2020</vocab:date>
+    <geo:Point>
+      <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#4366976">
+        <geo:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#double">40.751892</geo:lat>
+        <geo:long rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-73.98881</geo:long>
+      </rdf:Description>
+    </geo:Point>
+    <vocab:vehicle_type_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Station Wagon/Sport Utility Vehicle</vocab:vehicle_type_2>
+    <vocab:zip rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10018.0</vocab:zip>
+    <vocab:borough rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MANHATTAN</vocab:borough>
+    <vocab:persons_injured rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</vocab:persons_injured>
+    <vocab:vehicle_type_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sedan</vocab:vehicle_type_1>
+    <vocab:persons_killed rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</vocab:persons_killed>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4366976</rdfs:label>
+    <vocab:pedestrians_injured rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</vocab:pedestrians_injured>
+    <vocab:contributing_factor_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Driver Inattention/Distraction</vocab:contributing_factor_1>
+    <vocab:pedestrians_killed rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</vocab:pedestrians_killed>
+    <vocab:contributing_factor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unspecified</vocab:contributing_factor_2>
+  </rdf:Description>
+</rdf:RDF>
