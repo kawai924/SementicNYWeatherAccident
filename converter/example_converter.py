@@ -26,7 +26,7 @@ def start():
     graph = Graph()
 
     # Load the externally defined schema into the default graph (context) of the dataset/graph
-    graph.parse(vocabulary + 'example_vocab.ttl', format='turtle')
+    # graph.parse(vocabulary + 'example_vocab.ttl', format='turtle')
 
     graph.bind('g20data', DATA)
     graph.bind('g20vocab', VOCAB)
