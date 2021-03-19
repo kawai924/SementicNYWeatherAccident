@@ -57,75 +57,94 @@ def convert_to_rdf(input_file, output_file):
 
         # Collision_id is primary key
         accident = URIRef(to_iri(resource + str(accident_data['COLLISION_ID'])))
+        vehicleAccident = URIRef(to_iri(accidentVocab + 'VehicleAccident'))
         collision_id = Literal(accident_data['COLLISION_ID'], datatype=XSD['integer'])
 
+        graph.add((accident, RDFS.label, collision_id))
+        graph.add((accident, RDF.type, vehicleAccident))
+
         # change this to already existing namespace?
-        crash_date = Literal(accident_data['CRASH DATE'], datatype=XSD['string'])    # change this to xsd:date
+        crash_date_raw = accident_data['CRASH DATE'].split('/')
+        crash_date_formatted = crash_date_raw[2] + "-" + crash_date_raw[0] + "-" + crash_date_raw[1]
+        crash_date = Literal(crash_date_formatted, datatype=XSD['date'])
+        graph.add((accident, ACC['hasCrashDate'], crash_date))
 
         # create new resource called Address:
-        vehicleAccident = URIRef(to_iri(accidentVocab + 'VehicleAccident'))
-        borough = URIRef(to_iri(accidentVocab + str(accident_data['BOROUGH']).capitalize()))
+        borough_raw = str(accident_data['BOROUGH']).split(" ")
+        borough_data = [b.capitalize() for b in borough_raw]
 
-        if (pd.isnull(accident_data['ZIP CODE']) == False):
-            zip = Literal(int(accident_data['ZIP CODE']), datatype=XSD['integer'])
-            graph.add((accident, ACC['hasZipcode'], zip))
-        # include location
-
-        geo = URIRef(to_iri(geocoord + str(accident_data['COLLISION_ID'])))
-        lat = Literal(accident_data['LATITUDE'], datatype=XSD['double'])
-        lon = Literal(accident_data['LONGITUDE'], datatype=XSD['double'])
-
-        if (pd.isnull(accident_data['ON STREET NAME']) == False):
-            street = Literal(accident_data['ON STREET NAME'].rstrip(), datatype=XSD['string'])
-            graph.add((accident, VOCAB['street'], street))
-
-        persons_injured = Literal(accident_data['NUMBER OF PERSONS INJURED'], datatype=XSD['integer'])
-        persons_killed = Literal(accident_data['NUMBER OF PERSONS KILLED'], datatype=XSD['integer'])
-        pedestrians_injured = Literal(accident_data['NUMBER OF PEDESTRIANS INJURED'], datatype=XSD['integer'])
-        pedestrians_killed = Literal(accident_data['NUMBER OF PEDESTRIANS KILLED'], datatype=XSD['integer'])
-
-        vehicleTypeString = accident_data['VEHICLE TYPE CODE 1']
-        if(len(accident_data['VEHICLE TYPE CODE 1'].split('/')) > 1):
-            vehicleTypeString = accident_data['VEHICLE TYPE CODE 1'].split('/')[0].replace(" ", "")
-
-        vehicleType = URIRef(to_iri(accidentVocab + vehicleTypeString))
-        vehicle_type_1 = Literal(vehicleTypeString, datatype=ACC + vehicleTypeString)
-        if(pd.isnull(accident_data['VEHICLE TYPE CODE 2']) == False):
-            vehicle_type_2 = Literal(accident_data['VEHICLE TYPE CODE 2'], datatype=XSD['string'])
-            graph.add((accident, VOCAB['vehicle_type_2'], vehicle_type_2))
-
-        if(pd.isnull(accident_data['VEHICLE TYPE CODE 3']) == False):
-            vehicle_type_3 = Literal(accident_data['VEHICLE TYPE CODE 3'], datatype=XSD['string'])
-            graph.add((accident, VOCAB['vehicle_type_3'], vehicle_type_3))
-
-        contributing_factor_1 = Literal(accident_data['CONTRIBUTING FACTOR VEHICLE 1'], datatype=XSD['string'])
-        if(pd.isnull(accident_data['CONTRIBUTING FACTOR VEHICLE 2']) == False):
-            vehicle_type_2 = Literal(accident_data['CONTRIBUTING FACTOR VEHICLE 2'], datatype=XSD['string'])
-            graph.add((accident, VOCAB['contributing_factor_2'], vehicle_type_2))
-
-        if(pd.isnull(accident_data['CONTRIBUTING FACTOR VEHICLE 3']) == False):
-            vehicle_type_3 = Literal(accident_data['CONTRIBUTING FACTOR VEHICLE 3'], datatype=XSD['string'])
-            graph.add((accident, VOCAB['contributing_factor_3'], vehicle_type_3))
-
-        graph.add((accident, RDFS.label, collision_id))
-
-        # graph.add((accident, GEO['Point'], geo))
-        graph.add((accident, RDF.type, vehicleAccident))
-        graph.add((accident, GEO['lat'], lat))
-        graph.add((accident, GEO['long'], lon))
-
-        graph.add((accident, ACC['hasCrashDate'], crash_date))
+        # borough_data = str(accident_data['BOROUGH']).capitalize()
+        borough = URIRef(to_iri(accidentVocab + ''.join(borough_data)))
         graph.add((borough, RDF.type, borough))
         graph.add((accident, ACC['hasBorough'], borough))
 
-        graph.add((vehicleType, RDF.type, vehicleType))
-        graph.add((accident, ACC['hasVehicleType'], vehicleType))
-        graph.add((accident, VOCAB['contributing_factor_1'], contributing_factor_1))
+        if (pd.isnull(accident_data['ZIP CODE']) == False):
+            zip = URIRef(to_iri(accidentVocab + str(int(accident_data['ZIP CODE']))))
+            graph.add((borough, ACC['hasZipcode'], zip))
 
+
+        lat = Literal(accident_data['LATITUDE'], datatype=XSD['double'])
+        lon = Literal(accident_data['LONGITUDE'], datatype=XSD['double'])
+        graph.add((accident, GEO['lat'], lat))
+        graph.add((accident, GEO['long'], lon))
+
+        if (pd.isnull(accident_data['ON STREET NAME']) == False):
+            streets = accident_data['ON STREET NAME'].rstrip().split(" ")
+            street = [s.capitalize() for s in streets]
+            street_data = URIRef(to_iri(accidentVocab + ''.join(street)))
+            # graph.add((street_data, RDF.type, XSD['string']))
+            graph.add((accident, ACC['hasStreetName'], street_data))
+
+        persons_injured = Literal(accident_data['NUMBER OF PERSONS INJURED'], datatype=XSD['integer'])
         graph.add((accident, ACC['hasPersonsInjured'], persons_injured))
+
+        persons_killed = Literal(accident_data['NUMBER OF PERSONS KILLED'], datatype=XSD['integer'])
         graph.add((accident, ACC['hasPersonsKilled'], persons_killed))
+
+        pedestrians_injured = Literal(accident_data['NUMBER OF PEDESTRIANS INJURED'], datatype=XSD['integer'])
         graph.add((accident, ACC['hasPedestriansInjured'], pedestrians_injured))
+
+        pedestrians_killed = Literal(accident_data['NUMBER OF PEDESTRIANS KILLED'], datatype=XSD['integer'])
         graph.add((accident, ACC['hasPedestriansKilled'], pedestrians_killed))
+
+        vehicleType1_data = accident_data['VEHICLE TYPE CODE 1']
+        if(len(vehicleType1_data.split('/')) > 1):
+            vehicleType1_data = accident_data['VEHICLE TYPE CODE 1'].split('/')[0].replace(" ", "")
+
+        vehicleType1 = URIRef(to_iri(accidentVocab + vehicleType1_data))
+        graph.add((vehicleType1, RDF.type, vehicleType1))
+        graph.add((accident, ACC['hasVehicleType'], vehicleType1))
+
+        # vehicle_type_1 = Literal(vehicleType1_data, datatype=ACC + vehicleType1_data)
+        if (pd.isnull(accident_data['VEHICLE TYPE CODE 2']) == False):
+            vehicleType2_data = accident_data['VEHICLE TYPE CODE 2']
+            if(len(vehicleType2_data.split('/')) > 1):
+                vehicleType2_data = accident_data['VEHICLE TYPE CODE 2'].split('/')[0].replace(" ", "")
+
+            vehicleType2 = URIRef(to_iri(accidentVocab + vehicleType2_data))
+            graph.add((vehicleType2, RDF.type, vehicleType2))
+            graph.add((accident, ACC['hasVehicleType'], vehicleType2))
+
+        if (pd.isnull(accident_data['VEHICLE TYPE CODE 3']) == False):
+            vehicleType3_data = accident_data['VEHICLE TYPE CODE 3']
+            if(len(vehicleType3_data.split('/')) > 1):
+                vehicleType3_data = accident_data['VEHICLE TYPE CODE 3'].split('/')[0].replace(" ", "")
+
+            vehicleType3 = URIRef(to_iri(accidentVocab + vehicleType3_data))
+            graph.add((vehicleType3, RDF.type, vehicleType3))
+            graph.add((accident, ACC['hasVehicleType'], vehicleType3))
+
+        if(accident_data['CONTRIBUTING FACTOR VEHICLE 1'] != 'Unspecified'):
+            contributing_factor_1 = URIRef(to_iri(accidentVocab + accident_data['CONTRIBUTING FACTOR VEHICLE 1']))
+            graph.add((accident, ACC['hasContributingFactor'], contributing_factor_1))
+
+        if(pd.isnull(accident_data['CONTRIBUTING FACTOR VEHICLE 2']) == False and accident_data['CONTRIBUTING FACTOR VEHICLE 2'] != 'Unspecified'):
+            contributing_factor_2 = URIRef(to_iri(accidentVocab + accident_data['CONTRIBUTING FACTOR VEHICLE 2']))
+            graph.add((accident, ACC['hasContributingFactor'], contributing_factor_2))
+
+        if(pd.isnull(accident_data['CONTRIBUTING FACTOR VEHICLE 3']) == False and accident_data['CONTRIBUTING FACTOR VEHICLE 3'] != 'Unspecified'):
+            contributing_factor_3 = URIRef(to_iri(accidentVocab + accident_data['CONTRIBUTING FACTOR VEHICLE 3']))
+            graph.add((accident, ACC['hasContributingFactor'], contributing_factor_3))
 
         # just for debugging purposes
         if((index % 10000) == 0):
