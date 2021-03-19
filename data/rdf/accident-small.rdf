@@ -1,70 +1,423 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
-  xmlns:vocab="http://github.com/kawai924/SementicNYWeatherAccident/vocabulary/"
-  xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
-  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns="http://github.com/kawai924/SementicNYWeatherAccident/accident#"
+   xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vocab="http://github.com/kawai924/SementicNYWeatherAccident/vocabulary/"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 >
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#hasStreetName">
+    <rdfs:domain rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Accident"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#isStreetNameOf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#VehicleTypeValuePartition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#hasPedestriansInjured">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/resource/3894637">
+    <geo:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#double">40.595753</geo:lat>
+    <hasZipcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11224</hasZipcode>
+    <geo:long rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-73.964678</geo:long>
+    <hasBorough rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Manhattan"/>
+    <hasPersonsKilled rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPersonsKilled>
+    <hasPedestriansInjured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasPedestriansInjured>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3894637</rdfs:label>
+    <rdf:type rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#VehicleAccident"/>
+    <vocab:contributing_factor_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unspecified</vocab:contributing_factor_1>
+    <hasVehicleType rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Sedan"/>
+    <hasPedestriansKilled rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPedestriansKilled>
+    <hasPersonsInjured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPersonsInjured>
+    <hasCrashDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">05/03/2018</hasCrashDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#Borough">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#VehicleAccident">
+    <rdfs:subClassOf rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Accident"/>
+    <rdfs:subClassOf rdf:nodeID="ub1bL270C34"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#isVehicleTypeOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#VehicleTypeValuePartition"/>
+    <rdfs:range rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Accident"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#hasPedestriansKilled">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#BronxAccident">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="ub1bL154C36"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#Pick-upTruck">
+    <rdfs:subClassOf rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#VehicleTypeValuePartition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL242C36">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb10"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb19">
+    <rdf:first rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Sedan"/>
+    <rdf:rest rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb20"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb16">
+    <rdf:first rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#ConcreteMixer"/>
+    <rdf:rest rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb17"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#hasBorough">
+    <rdfs:domain rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Accident"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Borough"/>
+    <owl:inverseOf rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#isBoroughOf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#Taxi">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#VehicleTypeValuePartition"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL122C27">
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/resource/4358053">
-    <vocab:pedestrians_killed rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</vocab:pedestrians_killed>
+    <vocab:street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BELT PARKWAY</vocab:street>
+    <hasCrashDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10/15/2018</hasCrashDate>
+    <hasVehicleType rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#StationWagon"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4358053</rdfs:label>
+    <hasBorough rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Manhattan"/>
+    <hasPedestriansInjured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPedestriansInjured>
     <vocab:contributing_factor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unspecified</vocab:contributing_factor_2>
-    <vocab:vehicle_type_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Station Wagon/Sport Utility Vehicle</vocab:vehicle_type_1>
-    <vocab:zip rdf:datatype="http://www.w3.org/2001/XMLSchema#int">nan</vocab:zip>
-    <vocab:persons_killed rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</vocab:persons_killed>
-    <vocab:street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BELT PARKWAY                    </vocab:street>
-    <vocab:vehicle_type_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Station Wagon/Sport Utility Vehicle</vocab:vehicle_type_2>
-    <vocab:borough rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nan</vocab:borough>
-    <vocab:pedestrians_injured rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</vocab:pedestrians_injured>
+    <geo:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#double">40.667366</geo:lat>
+    <hasPedestriansKilled rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPedestriansKilled>
+    <hasPersonsKilled rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPersonsKilled>
     <vocab:contributing_factor_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Following Too Closely</vocab:contributing_factor_1>
-    <vocab:persons_injured rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</vocab:persons_injured>
-    <geo:Point>
-      <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#4358053">
-        <geo:long rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-73.77181</geo:long>
-        <geo:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#double">40.667366</geo:lat>
-      </rdf:Description>
-    </geo:Point>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4358053</rdfs:label>
-    <vocab:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10/15/2020</vocab:date>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/resource/4356755">
-    <geo:Point>
-      <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#4356755">
-        <geo:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#double">40.862747</geo:lat>
-        <geo:long rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-73.90494</geo:long>
-      </rdf:Description>
-    </geo:Point>
-    <vocab:zip rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10468.0</vocab:zip>
-    <vocab:contributing_factor_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Failure to Yield Right-of-Way</vocab:contributing_factor_1>
-    <vocab:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10/09/2020</vocab:date>
-    <vocab:persons_injured rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</vocab:persons_injured>
-    <vocab:vehicle_type_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sedan</vocab:vehicle_type_1>
-    <vocab:street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WEST FORDHAM ROAD               </vocab:street>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4356755</rdfs:label>
-    <vocab:persons_killed rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</vocab:persons_killed>
-    <vocab:vehicle_type_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sedan</vocab:vehicle_type_2>
-    <vocab:pedestrians_injured rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</vocab:pedestrians_injured>
-    <vocab:borough rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BRONX</vocab:borough>
-    <vocab:pedestrians_killed rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</vocab:pedestrians_killed>
-    <vocab:contributing_factor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unspecified</vocab:contributing_factor_2>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/resource/4366976">
-    <vocab:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10/21/2020</vocab:date>
-    <geo:Point>
-      <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#4366976">
-        <geo:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#double">40.751892</geo:lat>
-        <geo:long rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-73.98881</geo:long>
-      </rdf:Description>
-    </geo:Point>
+    <geo:long rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-73.77181</geo:long>
+    <rdf:type rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#VehicleAccident"/>
     <vocab:vehicle_type_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Station Wagon/Sport Utility Vehicle</vocab:vehicle_type_2>
-    <vocab:zip rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10018.0</vocab:zip>
-    <vocab:borough rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MANHATTAN</vocab:borough>
-    <vocab:persons_injured rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</vocab:persons_injured>
-    <vocab:vehicle_type_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sedan</vocab:vehicle_type_1>
-    <vocab:persons_killed rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</vocab:persons_killed>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4366976</rdfs:label>
-    <vocab:pedestrians_injured rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</vocab:pedestrians_injured>
-    <vocab:contributing_factor_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Driver Inattention/Distraction</vocab:contributing_factor_1>
-    <vocab:pedestrians_killed rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</vocab:pedestrians_killed>
-    <vocab:contributing_factor_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unspecified</vocab:contributing_factor_2>
+    <hasPersonsInjured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPersonsInjured>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL218C89">
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:withRestrictions rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb7"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL114C27">
+    <owl:onProperty rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#hasCrashDate"/>
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL204C63">
+    <owl:onProperty rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#hasBorough"/>
+    <owl:someValuesFrom rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Manhattan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL306C1">
+    <owl:members rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb24"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb24">
+    <rdf:first rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Bronx"/>
+    <rdf:rest rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb25"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb14">
+    <rdf:rest rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb15"/>
+    <rdf:first rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#BoxTruck"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb21">
+    <rdf:first rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Taxi"/>
+    <rdf:rest rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb22"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/resource/3894635">
+    <hasBorough rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Brooklyn"/>
+    <hasPersonsKilled rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPersonsKilled>
+    <vocab:contributing_factor_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unspecified</vocab:contributing_factor_1>
+    <hasVehicleType rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Sedan"/>
+    <geo:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#double">40.595753</geo:lat>
+    <hasPedestriansInjured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasPedestriansInjured>
+    <rdf:type rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#VehicleAccident"/>
+    <hasZipcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11223</hasZipcode>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3894635</rdfs:label>
+    <hasCrashDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">05/03/2018</hasCrashDate>
+    <geo:long rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-73.964676</geo:long>
+    <hasPedestriansKilled rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPedestriansKilled>
+    <hasPersonsInjured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasPersonsInjured>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#3-Door">
+    <rdfs:subClassOf rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#VehicleTypeValuePartition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#hasVehicleType">
+    <rdfs:domain rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Accident"/>
+    <rdfs:range rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#VehicleTypeValuePartition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:inverseOf rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#isVehicleTypeOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb26">
+    <rdf:first rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Manhattan"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL243C59">
+    <owl:someValuesFrom rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Sedan"/>
+    <owl:onProperty rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#hasVehicleType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb15">
+    <rdf:first rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Bus"/>
+    <rdf:rest rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb16"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL172C62">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Brooklyn"/>
+    <owl:onProperty rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#hasBorough"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#Bike">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#VehicleTypeValuePartition"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL155C59">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#hasBorough"/>
+    <owl:someValuesFrom rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Bronx"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL216C68">
+    <owl:onProperty rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#hasPersonsInjured"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:nodeID="ub1bL218C89"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb10">
+    <rdf:rest rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb11"/>
+    <rdf:first rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#VehicleAccident"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#SedanAccident">
+    <owl:equivalentClass rdf:nodeID="ub1bL242C36"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#isBoroughOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Borough"/>
+    <rdfs:range rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Accident"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb3">
+    <rdf:rest rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb4"/>
+    <rdf:first rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Accident"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb5">
+    <rdf:rest rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb6"/>
+    <rdf:first rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Accident"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL118C27">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL289C1">
+    <owl:members rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb12"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#ManhattanAccident">
+    <owl:equivalentClass rdf:nodeID="ub1bL203C40"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb25">
+    <rdf:rest rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb26"/>
+    <rdf:first rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Brooklyn"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb18">
+    <rdf:first rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Pick-upTruck"/>
+    <rdf:rest rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb19"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL270C34">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Borough"/>
+    <owl:onProperty rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#hasBorough"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#Ambulance">
+    <rdfs:subClassOf rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#VehicleTypeValuePartition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#hasZipcode">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:comment>Zip code of where the accident happened.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Accident"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb7">
+    <rdf:first rdf:nodeID="ub1bL220C114"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb12">
+    <rdf:rest rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb13"/>
+    <rdf:first rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Ambulance"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb11">
+    <rdf:first rdf:nodeID="ub1bL243C59"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#hasPersonsKilled">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb6">
+    <rdf:first rdf:nodeID="ub1bL204C63"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#StationWagon">
+    <rdfs:subClassOf rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#VehicleTypeValuePartition"/>
+    <rdf:type rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#StationWagon"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#Manhattan">
+    <rdf:type rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Manhattan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Borough"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL203C40">
+    <owl:intersectionOf rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb5"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb2">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="ub1bL155C59"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb17">
+    <rdf:rest rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb18"/>
+    <rdf:first rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#E-Bike"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#TractorTruckDiesel">
+    <rdfs:subClassOf rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#VehicleTypeValuePartition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#Bus">
+    <rdfs:subClassOf rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#VehicleTypeValuePartition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb22">
+    <rdf:rest rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb23"/>
+    <rdf:first rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#TractorTruckDiesel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#Brooklyn">
+    <rdf:type rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Brooklyn"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Borough"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#Bronx">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Borough"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb20">
+    <rdf:first rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#StationWagon"/>
+    <rdf:rest rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb21"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb1">
+    <rdf:rest rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb2"/>
+    <rdf:first rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Accident"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#hasCrashDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Accident"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#BrooklynAccident">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="ub1bL171C39"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb23">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#3-Door"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#ConcreteMixer">
+    <rdfs:subClassOf rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#VehicleTypeValuePartition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#Accident">
+    <rdfs:subClassOf rdf:nodeID="ub1bL122C27"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="ub1bL118C27"/>
+    <rdfs:subClassOf rdf:nodeID="ub1bL114C27"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#isStreetNameOf">
+    <rdfs:range rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Accident"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb8">
+    <rdf:rest rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb9"/>
+    <rdf:first rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#VehicleAccident"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#BoxTruck">
+    <rdfs:subClassOf rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#VehicleTypeValuePartition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#hasPersonsInjured">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb13">
+    <rdf:first rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Bike"/>
+    <rdf:rest rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb14"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#E-Bike">
+    <rdfs:subClassOf rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#VehicleTypeValuePartition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb9">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="ub1bL216C68"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#PersonsInjuredAccident">
+    <owl:equivalentClass rdf:nodeID="ub1bL215C45"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL154C36">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL215C45">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL171C39">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f50d3edf1e8a04501b7af007bf78c80bbb4">
+    <rdf:first rdf:nodeID="ub1bL172C62"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub1bL220C114">
+    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#Sedan">
+    <rdfs:subClassOf rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#VehicleTypeValuePartition"/>
+    <rdf:type rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Sedan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
   </rdf:Description>
 </rdf:RDF>
