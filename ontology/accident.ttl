@@ -34,6 +34,12 @@ xsd:date rdf:type rdfs:Datatype .
                        rdfs:domain :Accident .
 
 
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#hasLocation
+:hasLocation rdf:type owl:ObjectProperty ;
+             owl:inverseOf :isLocationOf ;
+             rdfs:domain :Borough .
+
+
 ###  http://github.com/kawai924/SementicNYWeatherAccident/accident#hasStreetName
 :hasStreetName rdf:type owl:ObjectProperty ;
                owl:inverseOf :isStreetNameOf ;
@@ -64,6 +70,12 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://github.com/kawai924/SementicNYWeatherAccident/accident#isContributingFactorOf
 :isContributingFactorOf rdf:type owl:ObjectProperty ;
                         rdfs:range :Accident .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#isLocationOf
+:isLocationOf rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:range :Borough .
 
 
 ###  http://github.com/kawai924/SementicNYWeatherAccident/accident#isStreetNameOf
@@ -97,37 +109,37 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://github.com/kawai924/SementicNYWeatherAccident/accident#hasPedestriansInjured
 :hasPedestriansInjured rdf:type owl:DatatypeProperty ;
-                       rdfs:subPropertyOf owl:topDataProperty .
+                       rdfs:domain :Accident ;
+                       rdfs:range xsd:integer .
 
 
 ###  http://github.com/kawai924/SementicNYWeatherAccident/accident#hasPedestriansKilled
 :hasPedestriansKilled rdf:type owl:DatatypeProperty ;
-                      rdfs:subPropertyOf owl:topDataProperty .
+                      rdfs:domain :Accident ;
+                      rdfs:range xsd:integer .
 
 
 ###  http://github.com/kawai924/SementicNYWeatherAccident/accident#hasPersonsInjured
 :hasPersonsInjured rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf owl:topDataProperty .
+                   rdfs:domain :Accident ;
+                   rdfs:range xsd:integer .
 
 
 ###  http://github.com/kawai924/SementicNYWeatherAccident/accident#hasPersonsKilled
 :hasPersonsKilled rdf:type owl:DatatypeProperty ;
-                  rdfs:subPropertyOf owl:topDataProperty .
-
-
-###  http://github.com/kawai924/SementicNYWeatherAccident/accident#acc:hasCrashDate
-:acc:hasCrashDate rdf:type owl:DatatypeProperty .
+                  rdfs:domain :Accident ;
+                  rdfs:range xsd:integer .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
-<http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type owl:DatatypeProperty ,
-                                                       owl:FunctionalProperty ;
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain :Accident ;
                                               rdfs:range xsd:double .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#long
-<http://www.w3.org/2003/01/geo/wgs84_pos#long> rdf:type owl:DatatypeProperty ,
-                                                        owl:FunctionalProperty ;
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain :Accident ;
                                                rdfs:range xsd:double .
 
 
@@ -185,6 +197,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                             owl:someValuesFrom :Bronx
                                                                           ]
                                                                           [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :isLocationOf ;
+                                                                            owl:someValuesFrom :Bronx
+                                                                          ]
+                                                                          [ rdf:type owl:Restriction ;
                                                                             owl:onProperty :isZipcodeOf ;
                                                                             owl:someValuesFrom :Bronx
                                                                           ]
@@ -206,6 +222,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                              [ rdf:type owl:Class ;
                                                                owl:unionOf ( [ rdf:type owl:Restriction ;
                                                                                owl:onProperty :hasBorough ;
+                                                                               owl:someValuesFrom :Brooklyn
+                                                                             ]
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty :isLocationOf ;
                                                                                owl:someValuesFrom :Brooklyn
                                                                              ]
                                                                              [ rdf:type owl:Restriction ;
@@ -257,6 +277,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                               [ rdf:type owl:Class ;
                                                                 owl:unionOf ( [ rdf:type owl:Restriction ;
                                                                                 owl:onProperty :hasBorough ;
+                                                                                owl:someValuesFrom :Manhattan
+                                                                              ]
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty :isLocationOf ;
                                                                                 owl:someValuesFrom :Manhattan
                                                                               ]
                                                                               [ rdf:type owl:Restriction ;
@@ -388,6 +412,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                  [ rdf:type owl:Class ;
                                                                    owl:unionOf ( [ rdf:type owl:Restriction ;
                                                                                    owl:onProperty :hasBorough ;
+                                                                                   owl:someValuesFrom :StatenIsland
+                                                                                 ]
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty :isLocationOf ;
                                                                                    owl:someValuesFrom :StatenIsland
                                                                                  ]
                                                                                  [ rdf:type owl:Restriction ;

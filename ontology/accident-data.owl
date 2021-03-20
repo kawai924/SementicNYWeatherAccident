@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://github.com/kawai924/SementicNYWeatherAccident/accident#"
+     xml:base="http://github.com/kawai924/SementicNYWeatherAccident/accident"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:accident="http://github.com/kawai924/SementicNYWeatherAccident/accident#">
+    <owl:Ontology rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://github.com/kawai924/SementicNYWeatherAccident/accident#hasBorough -->
+
+    <owl:ObjectProperty rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#hasBorough">
+        <owl:inverseOf rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#isBoroughOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Accident"/>
+        <rdfs:range rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Borough"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://github.com/kawai924/SementicNYWeatherAccident/accident#hasStreetName -->
+
+    <owl:ObjectProperty rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#hasStreetName">
+        <owl:inverseOf rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#isStreetNameOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Accident"/>
+        <rdfs:range rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#StreetName"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://github.com/kawai924/SementicNYWeatherAccident/accident#isBoroughOf -->
+
+    <owl:ObjectProperty rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#isBoroughOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Borough"/>
+        <rdfs:range rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Accident"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://github.com/kawai924/SementicNYWeatherAccident/accident#isStreetNameOf -->
+
+    <owl:ObjectProperty rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#isStreetNameOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#StreetName"/>
+        <rdfs:range rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Accident"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://github.com/kawai924/SementicNYWeatherAccident/accident#hasCrashDate -->
+
+    <owl:DatatypeProperty rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#hasCrashDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://github.com/kawai924/SementicNYWeatherAccident/accident#hasZipcode -->
+
+    <owl:DatatypeProperty rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#hasZipcode">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Zip code of where the accident happened.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://github.com/kawai924/SementicNYWeatherAccident/accident#Accident -->
+
+    <owl:Class rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#Accident">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#hasCrashDate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Data that describes an accident.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://github.com/kawai924/SementicNYWeatherAccident/accident#Borough -->
+
+    <owl:Class rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#Borough"/>
+    
+
+
+    <!-- http://github.com/kawai924/SementicNYWeatherAccident/accident#Bronx -->
+
+    <owl:Class rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#Bronx">
+        <rdfs:subClassOf rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Borough"/>
+    </owl:Class>
+    
+
+
+    <!-- http://github.com/kawai924/SementicNYWeatherAccident/accident#Brooklyn -->
+
+    <owl:Class rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#Brooklyn">
+        <rdfs:subClassOf rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Borough"/>
+    </owl:Class>
+    
+
+
+    <!-- http://github.com/kawai924/SementicNYWeatherAccident/accident#Manhattan -->
+
+    <owl:Class rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#Manhattan">
+        <rdfs:subClassOf rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Borough"/>
+    </owl:Class>
+    
+
+
+    <!-- http://github.com/kawai924/SementicNYWeatherAccident/accident#ManhattanAccident -->
+
+    <owl:Class rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#ManhattanAccident">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#Accident"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#hasBorough"/>
+                        <owl:someValuesFrom rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Manhattan"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://github.com/kawai924/SementicNYWeatherAccident/accident#StreetName -->
+
+    <owl:Class rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#StreetName"/>
+    
+
+
+    <!-- http://github.com/kawai924/SementicNYWeatherAccident/accident#VehicleAccident -->
+
+    <owl:Class rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#VehicleAccident">
+        <rdfs:subClassOf rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Accident"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#hasBorough"/>
+                <owl:someValuesFrom rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Borough"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#hasStreetName"/>
+                <owl:someValuesFrom rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#StreetName"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#hasZipcode"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://github.com/kawai924/SementicNYWeatherAccident/accident#Borough-Manhattan -->
+
+    <owl:NamedIndividual rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#Borough-Manhattan">
+        <rdf:type rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Manhattan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://github.com/kawai924/SementicNYWeatherAccident/accident#Example-Man -->
+
+    <owl:NamedIndividual rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#Example-Man">
+        <rdf:type rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#VehicleAccident"/>
+        <hasBorough rdf:resource="http://github.com/kawai924/SementicNYWeatherAccident/accident#Borough-Manhattan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#Accident"/>
+            <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#Borough"/>
+            <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#StreetName"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#Bronx"/>
+            <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#Brooklyn"/>
+            <rdf:Description rdf:about="http://github.com/kawai924/SementicNYWeatherAccident/accident#Manhattan"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
