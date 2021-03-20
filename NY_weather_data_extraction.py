@@ -54,5 +54,7 @@ if __name__ == '__main__':
     #NYdata()
     print('Converting csv into rdf...')
     # conv.start()
-    accident.convert_to_rdf('data/csv/Motor_Vehicle_Collisions_-_Crashes.csv', 'data/rdf/accident.rdf')
+    # accident.convert_to_rdf('data/csv/Motor_Vehicle_Collisions_-_Crashes.csv', 'data/rdf/accident.rdf')
+    accident.convert_to_rdf('data/csv/accident_data.csv', 'data/rdf/accident-small.rdf')
+
     print('Done :)')
