@@ -1,5 +1,6 @@
 import pandas as pd
 
+import converter.example_converter as conv
 
 def NYdata():
     # with open('data/NY_stations_id.txt', 'r') as f:
@@ -44,3 +45,12 @@ def NYdata():
 
     final.to_csv('data/NY_data.csv', index = False)
     WTdata.to_csv('data/NY_weather_type.csv', index = False)
+
+
+
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    #NYdata()
+    print('Converting csv into rdf...')
+    conv.start()
+    print('Done :)')

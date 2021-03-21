@@ -3,7 +3,7 @@
   <component name="GithubSharedProjectSettings">
     <option name="branchProtectionPatterns">
       <list>
-        <option value="dontScrewUp" />
+        <option value="master" />
       </list>
     </option>
   </component>
