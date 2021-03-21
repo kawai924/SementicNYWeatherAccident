@@ -22,8 +22,8 @@ def __setup_namespace__():
     RESOURCES = Namespace(resource)
     VOCABULARY = Namespace(vocabulary)
     GEO = Namespace(geocoord)
-    ACC = Namespace(stationVocab)
-    return RESOURCES, VOCABULARY, GEO, ACC
+    STA = Namespace(stationVocab)
+    return RESOURCES, VOCABULARY, GEO, STA
 
 
 def __setup_graph__(res, vocab):
@@ -31,7 +31,7 @@ def __setup_graph__(res, vocab):
     graph.bind('data', res)
     graph.bind('vocab', vocab)
     graph.bind('geo', geocoord)
-    graph.bind('acc', stationVocab)
+    graph.bind('STA', stationVocab)
     return graph
 
 
@@ -45,7 +45,7 @@ def convert_to_rdf(input_file, output_file):
     rows = 0
 
     data = __load__(input_file)
-    RES, VOCAB, GEO, ACC = __setup_namespace__()
+    RES, VOCAB, GEO, STA = __setup_namespace__()
     graph = __setup_graph__(RES, VOCAB)
     graph.parse(voc_location + 'NY_station_2.ttl', format='turtle')
 
@@ -55,10 +55,11 @@ def convert_to_rdf(input_file, output_file):
 
     for index, data in filter2020.iterrows():
 
-        # Collision_id is primary key
-        station = URIRef(to_iri(resource + str(data['GHCND'])))
+        # station ID is primary key
+        station = URIRef(to_iri(stationVocab + str(data['GHCND'])))
         station_id = Literal(data['GHCND'], datatype=XSD['string'])
-        graph.add((station, VOCAB['station_id'], station_id))
+        graph.add((station, STA['station_id'], station_id))
+        # graph.add((station, RDF.lable, station))
 
 
         # print(graph)
@@ -71,11 +72,19 @@ def convert_to_rdf(input_file, output_file):
         name = Literal(data['STATION_NAME'], datatype=XSD['string'])
         graph.add((station, RDFS.label, name))
 
+        # countrytag = URIRef(to_iri(stationVocab + '/' + str(data['CC'])))
         country = Literal(data['CC'], datatype=XSD['string'])
+        # graph.add((countrytag, RDF.type, countrytag))
+        graph.add((station, STA['country'], country))
+
+        # statetag = URIRef(to_iri(stationVocab + '/' +  str(data['ST'])))
         state = Literal(data['ST'], datatype=XSD['string'])
+        graph.add((station, STA['state'], state))
+        # graph.add((statetag, RDF.type, statetag))
+
+        # countytag = URIRef(to_iri(stationVocab + '/' +  str(data['COUNTY'])))
         county = Literal(data['COUNTY'], datatype=XSD['string'])
-        graph.add((station, VOCAB['country'], country))
-        graph.add((station, VOCAB['state'], state))
-        graph.add((station, VOCAB['county'], county))
+        graph.add((station, STA['county'], county))
+        # graph.add((countytag, RDF.type, countytag))
 
     __save__(graph, output_file)
