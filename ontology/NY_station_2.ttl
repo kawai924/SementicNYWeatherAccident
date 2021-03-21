@@ -13,16 +13,10 @@
 #    Object Properties
 #################################################################
 
-###  http://www.github.com/kawai924/SementicNYWeatherAccident/station#country
+###  http://www.semanticweb.org/dennislo/ontologies/2021/2/untitled-ontology-4#country
 :country rdf:type owl:ObjectProperty ,
                   owl:InverseFunctionalProperty ;
          rdfs:domain :country .
-
-
-###  http://www.github.com/kawai924/SementicNYWeatherAccident/station#state
-:state rdf:type owl:ObjectProperty ,
-                owl:InverseFunctionalProperty ;
-       rdfs:domain :state .
 
 
 ###  http://www.semanticweb.org/dennislo/ontologies/2021/2/untitled-ontology-4#county
@@ -35,6 +29,12 @@
 :geocode rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf owl:topObjectProperty ;
          rdfs:domain :geocode .
+
+
+###  http://www.semanticweb.org/dennislo/ontologies/2021/2/untitled-ontology-4#state
+:state rdf:type owl:ObjectProperty ,
+                owl:InverseFunctionalProperty ;
+       rdfs:domain :state .
 
 
 ###  http://www.semanticweb.org/dennislo/ontologies/2021/2/untitled-ontology-4#station_id
@@ -51,11 +51,6 @@
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/dennislo/ontologies/2021/2/untitled-ontology-4#geocode
-:geocode rdf:type owl:DatatypeProperty ;
-         rdfs:range xsd:double .
-
-
 ###  http://www.semanticweb.org/dennislo/ontologies/2021/2/untitled-ontology-4#location
 :location rdf:type owl:DatatypeProperty ;
           rdfs:domain :country ;
@@ -71,6 +66,12 @@
 ###  http://www.semanticweb.org/dennislo/ontologies/2021/2/untitled-ontology-4#station_id
 :station_id rdf:type owl:DatatypeProperty ;
             rdfs:range xsd:string .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#geocode
+<http://www.w3.org/2003/01/geo/wgs84_pos#geocode> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain :geocode ;
+                                                  rdfs:range xsd:double .
 
 
 #################################################################
