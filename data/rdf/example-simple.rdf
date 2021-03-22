@@ -1,91 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:g20vocab="http://data.krw.d2s.labs.vu.nl/group20/vocab/"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:g20vocab="http://data.krw.d2s.labs.vu.nl/group20/vocab/"
 >
-  <rdf:Description rdf:about="http://data.krw.d2s.labs.vu.nl/group20/resource/Jenny">
-    <g20vocab:age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12</g20vocab:age>
+  <rdf:Property rdf:about="http://data.krw.d2s.labs.vu.nl/group20/vocab/place">
+    <rdfs:range rdf:resource="http://data.krw.d2s.labs.vu.nl/group20/vocab/Place"/>
+    <rdfs:domain rdf:resource="http://data.krw.d2s.labs.vu.nl/group20/vocab/Person"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">place</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://data.krw.d2s.labs.vu.nl/group20/vocab/address">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">address</rdfs:label>
+    <rdfs:domain rdf:resource="http://data.krw.d2s.labs.vu.nl/group20/vocab/Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://data.krw.d2s.labs.vu.nl/group20/vocab/favourite_colour">
+    <rdfs:domain rdf:resource="http://data.krw.d2s.labs.vu.nl/group20/vocab/Person"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">colour</rdfs:label>
+    <rdfs:range rdf:resource="http://data.krw.d2s.labs.vu.nl/group20/vocab/Colour"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://data.krw.d2s.labs.vu.nl/group20/vocab/age">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://data.krw.d2s.labs.vu.nl/group20/vocab/Person"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age</rdfs:label>
+  </rdf:Property>
+  <rdf:Description rdf:about="http://data.krw.d2s.labs.vu.nl/group20/resource/John">
     <g20vocab:place>
       <rdf:Description rdf:about="http://data.krw.d2s.labs.vu.nl/group20/resource/The_Netherlands/Amsterdam">
         <rdfs:label xml:lang="en">Amsterdam</rdfs:label>
       </rdf:Description>
     </g20vocab:place>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John</rdfs:label>
     <g20vocab:favourite_colour>
-      <rdf:Description rdf:about="http://data.krw.d2s.labs.vu.nl/group20/resource/Mauve">
-        <rdfs:label xml:lang="en">Mauve</rdfs:label>
+      <rdf:Description rdf:about="http://data.krw.d2s.labs.vu.nl/group20/resource/Blue">
+        <rdfs:label xml:lang="en">Blue</rdfs:label>
       </rdf:Description>
     </g20vocab:favourite_colour>
-    <g20vocab:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leidseplein 2</g20vocab:address>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jenny</rdfs:label>
     <g20vocab:country>
       <rdf:Description rdf:about="http://data.krw.d2s.labs.vu.nl/group20/resource/The_Netherlands">
         <rdfs:label xml:lang="en">The Netherlands</rdfs:label>
       </rdf:Description>
     </g20vocab:country>
     <g20vocab:hobby>
-      <rdf:Description rdf:about="http://data.krw.d2s.labs.vu.nl/group20/resource/Dancing">
-        <rdfs:label xml:lang="en">Dancing</rdfs:label>
-      </rdf:Description>
-    </g20vocab:hobby>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.krw.d2s.labs.vu.nl/group20/resource/John">
-    <g20vocab:age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">32</g20vocab:age>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John</rdfs:label>
-    <g20vocab:place rdf:resource="http://data.krw.d2s.labs.vu.nl/group20/resource/The_Netherlands/Amsterdam"/>
-    <g20vocab:country rdf:resource="http://data.krw.d2s.labs.vu.nl/group20/resource/The_Netherlands"/>
-    <g20vocab:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dam 52</g20vocab:address>
-    <g20vocab:favourite_colour>
-      <rdf:Description rdf:about="http://data.krw.d2s.labs.vu.nl/group20/resource/Blue">
-        <rdfs:label xml:lang="en">Blue</rdfs:label>
-      </rdf:Description>
-    </g20vocab:favourite_colour>
-    <g20vocab:hobby>
       <rdf:Description rdf:about="http://data.krw.d2s.labs.vu.nl/group20/resource/Fishing">
         <rdfs:label xml:lang="en">Fishing</rdfs:label>
       </rdf:Description>
     </g20vocab:hobby>
+    <g20vocab:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dam 52</g20vocab:address>
+    <g20vocab:age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">32</g20vocab:age>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.krw.d2s.labs.vu.nl/group20/resource/Jill">
-    <g20vocab:age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">28</g20vocab:age>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jill</rdfs:label>
-    <g20vocab:place>
-      <rdf:Description rdf:about="http://data.krw.d2s.labs.vu.nl/group20/resource/United_States_of_America/Amsterdam">
-        <rdfs:label xml:lang="en">Amsterdam</rdfs:label>
-      </rdf:Description>
-    </g20vocab:place>
-    <g20vocab:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">52W Street 5</g20vocab:address>
-    <g20vocab:favourite_colour>
-      <rdf:Description rdf:about="http://data.krw.d2s.labs.vu.nl/group20/resource/Cyan">
-        <rdfs:label xml:lang="en">Cyan</rdfs:label>
-      </rdf:Description>
-    </g20vocab:favourite_colour>
-    <g20vocab:hobby>
-      <rdf:Description rdf:about="http://data.krw.d2s.labs.vu.nl/group20/resource/Carpentry">
-        <rdfs:label xml:lang="en">Carpentry</rdfs:label>
-      </rdf:Description>
-    </g20vocab:hobby>
-    <g20vocab:country>
-      <rdf:Description rdf:about="http://data.krw.d2s.labs.vu.nl/group20/resource/United_States_of_America">
-        <rdfs:label xml:lang="en">United States of America</rdfs:label>
-      </rdf:Description>
-    </g20vocab:country>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.krw.d2s.labs.vu.nl/group20/resource/Jake">
-    <g20vocab:hobby>
-      <rdf:Description rdf:about="http://data.krw.d2s.labs.vu.nl/group20/resource/Ballet">
-        <rdfs:label xml:lang="en">Ballet</rdfs:label>
-      </rdf:Description>
-    </g20vocab:hobby>
-    <g20vocab:age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</g20vocab:age>
-    <g20vocab:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12E Street 98</g20vocab:address>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jake</rdfs:label>
-    <g20vocab:place rdf:resource="http://data.krw.d2s.labs.vu.nl/group20/resource/United_States_of_America/Amsterdam"/>
-    <g20vocab:favourite_colour>
-      <rdf:Description rdf:about="http://data.krw.d2s.labs.vu.nl/group20/resource/Purple">
-        <rdfs:label xml:lang="en">Purple</rdfs:label>
-      </rdf:Description>
-    </g20vocab:favourite_colour>
-    <g20vocab:country rdf:resource="http://data.krw.d2s.labs.vu.nl/group20/resource/United_States_of_America"/>
-  </rdf:Description>
+  <rdfs:Class rdf:about="http://data.krw.d2s.labs.vu.nl/group20/vocab/Country">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Country</rdfs:label>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://data.krw.d2s.labs.vu.nl/group20/vocab/country">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://data.krw.d2s.labs.vu.nl/group20/vocab/hobby">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hobby</rdfs:label>
+    <rdfs:domain rdf:resource="http://data.krw.d2s.labs.vu.nl/group20/vocab/Person"/>
+    <rdfs:range rdf:resource="http://data.krw.d2s.labs.vu.nl/group20/vocab/Hobby"/>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://data.krw.d2s.labs.vu.nl/group20/vocab/Person">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Person</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://data.krw.d2s.labs.vu.nl/group20/vocab/Place">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Place</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://data.krw.d2s.labs.vu.nl/group20/vocab/Colour">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colour</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://data.krw.d2s.labs.vu.nl/group20/vocab/Hobby">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hobby</rdfs:label>
+  </rdfs:Class>
 </rdf:RDF>
