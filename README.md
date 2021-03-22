@@ -5,6 +5,18 @@ by Dennis Lo, Andreas Saplacan,\
 Mandar Vijay Kulkarni, Vatsal Patel
 
 ---
+###Running the project
+1) Clone the repository:
+```
+git clone https://github.com/kawai924/SementicNYWeatherAccident.git
+```
+
+
+2) Open the project in the file browser and unzip the ```venv.zip``` file
+
+
+3) Open the project in PyCharm and press `Run`
+---
 ###Software requirement (used):
 Python 3 (3.9)\
 pandas\
