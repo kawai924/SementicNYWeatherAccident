@@ -21,7 +21,8 @@ def __load__(file_path):
 def __setup_namespace__():
     RESOURCES = Namespace(resource)
     WEA = Namespace(weatherVocab)
-    return RESOURCES, WEA
+    STA = Namespace(station)
+    return RESOURCES, WEA, STA
 
 
 def __setup_graph__(res):
@@ -41,7 +42,7 @@ def convert_to_rdf(input_file, output_file):
     rows = 0
 
     data = __load__(input_file)
-    RES, WEA = __setup_namespace__()
+    RES, WEA, STA = __setup_namespace__()
     graph = __setup_graph__(RES)
     graph.parse(voc_location + 'weather.ttl', format='turtle')
 
@@ -57,12 +58,14 @@ def convert_to_rdf(input_file, output_file):
         # graph.add((stationId,WEA['isOn'],Date))
         # data property
         station_id = Literal(weather_data['station_id'], datatype=XSD['string'])
-        date = Literal(str(weather_data['date']), datatype=XSD['unsignedlong'])
+        date = Literal(str(weather_data['date']), datatype=XSD['date'])
         
         
         # borough_data = str(accident_data['BOROUGH']).capitalize()
         instance = URIRef(to_iri(weatherVocab + ''.join(station_id) + '/' +''.join(str(weather_data['date']))))
         graph.add((instance, RDF.type, instance))
+        # graph.add((instance, STA['station_id'], stationId))
+        graph.add((instance, WEA['stationID'], stationId))
         graph.add((instance, RDFS.label, station_id))
         graph.add((instance, RDFS.label, date))
         # graph.add((Weather, WEA['isinstance'], instance))
