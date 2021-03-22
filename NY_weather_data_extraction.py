@@ -8,21 +8,21 @@ def NYdata():
     df = pd.read_csv('data/csv/NY_stations_id.txt')
     # print(df)
     listdf = list(df.GHCND)
-
-    data2017 = pd.read_csv('/Users/dennislo/Downloads/2017.csv', header=None)
-    data2017[8] = data2017[0]
-    data2017 = data2017.set_index([0])
-    filter2017 =data2017.loc[data2017.index.isin(listdf)]
-
-    data2018 = pd.read_csv('/Users/dennislo/Downloads/2018.csv', header=None)
-    data2018[8] = data2018[0]
-    data2018 = data2018.set_index([0])
-    filter2018 = data2018.loc[data2018.index.isin(listdf)]
-
-    data2019 = pd.read_csv('/Users/dennislo/Downloads/2019.csv', header=None)
-    data2019[8] = data2019[0]
-    data2019 = data2019.set_index([0])
-    filter2019 = data2019.loc[data2019.index.isin(listdf)]
+    #
+    # data2017 = pd.read_csv('/Users/dennislo/Downloads/2017.csv', header=None)
+    # data2017[8] = data2017[0]
+    # data2017 = data2017.set_index([0])
+    # filter2017 =data2017.loc[data2017.index.isin(listdf)]
+    #
+    # data2018 = pd.read_csv('/Users/dennislo/Downloads/2018.csv', header=None)
+    # data2018[8] = data2018[0]
+    # data2018 = data2018.set_index([0])
+    # filter2018 = data2018.loc[data2018.index.isin(listdf)]
+    #
+    # data2019 = pd.read_csv('/Users/dennislo/Downloads/2019.csv', header=None)
+    # data2019[8] = data2019[0]
+    # data2019 = data2019.set_index([0])
+    # filter2019 = data2019.loc[data2019.index.isin(listdf)]
 
     data2020 = pd.read_csv('/Users/dennislo/Downloads/2020.csv', header=None)
     data2020[8] = data2020[0]

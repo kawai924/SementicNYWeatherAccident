@@ -5,7 +5,7 @@ from rdflib import URIRef, Literal, Namespace, RDF, RDFS, OWL, XSD, Graph, BNode
 resource = 'http://github.com/kawai924/SementicNYWeatherAccident/resource/'
 station = 'http://github.com/kawai924/SementicNYWeatherAccident/station#'
 weatherVocab = 'http://github.com/kawai924/SementicNYWeatherAccident/weather#'
-ontology = "../ontology/"
+ontology = "./ontology/"
 
 RESOURCES = Namespace(resource)
 
@@ -40,7 +40,7 @@ def convert_to_rdf(input_file, output_file):
     data = __load__(input_file)
     RES, WEA = __setup_namespace__()
     graph = __setup_graph__(RES)
-    graph.parse(ontology + 'weather.ttl', format='turtle')
+    graph.parse(ontology + 'weather_type.ttl', format='turtle')
 
     filter2020 = data
 
@@ -61,13 +61,13 @@ def convert_to_rdf(input_file, output_file):
         graph.add((instance, WEA['hasWeatherID'], Literal(data['WEATHER_ID'], datatype=XSD['string'])))
         graph.add((instance, WEA['hasWeatherType'], Literal(data['WEATHER_TYPE'], datatype=XSD['string'])))
         graph.add((instance, WEA['onDate'], Literal(data['DATE'], datatype=XSD['unsignedlong'])))
-
-        if index % 10000 == 0:
-           print("done with " + str(rows) + "0,000 rows")
-           rows += 1   
+        #
+        # if index % 10000 == 0:
+        #    print("done with " + str(rows) + "0,000 rows")
+        #    rows += 1
  
     __save__(graph, output_file)
-
-input_file = '../data/csv/NY_weather_type_2020.csv'
-output_file = '../data/rdf/NY_weather_type.rdf'
-convert_to_rdf(input_file,output_file)
+#
+# input_file = '../data/csv/NY_weather_type_pivot.csv'
+# output_file = '../data/rdf/NY_weather_type.rdf'
+# convert_to_rdf(input_file,output_file)
