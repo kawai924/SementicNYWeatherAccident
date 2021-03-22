@@ -1,0 +1,488 @@
+@prefix : <http://github.com/kawai924/SementicNYWeatherAccident/accident#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://github.com/kawai924/SementicNYWeatherAccident/accident> .
+
+<http://github.com/kawai924/SementicNYWeatherAccident/accident> rdf:type owl:Ontology .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#hasBorough
+:hasBorough rdf:type owl:ObjectProperty ;
+            owl:inverseOf :isBoroughOf ;
+            rdfs:domain :Accident ;
+            rdfs:range :Borough ;
+            owl:propertyChainAxiom ( :inLocation
+                                     :isLocationOf
+                                   ) ,
+                                   ( :inZipcode
+                                     :isZipcodeOf
+                                   ) .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#hasContributingFactor
+:hasContributingFactor rdf:type owl:ObjectProperty ;
+                       owl:inverseOf :isContributingFactorOf ;
+                       rdfs:domain :Accident .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#hasLocation
+:hasLocation rdf:type owl:ObjectProperty ;
+             owl:inverseOf :isLocationOf ;
+             rdfs:domain :Borough .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#hasVehicleType
+:hasVehicleType rdf:type owl:ObjectProperty ;
+                owl:inverseOf :isVehicleTypeOf ;
+                rdfs:domain :Accident ;
+                rdfs:range :VehicleTypeValuePartition .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#hasZipcode
+:hasZipcode rdf:type owl:ObjectProperty ;
+            owl:inverseOf :isZipcodeOf ;
+            rdfs:domain :Borough ;
+            rdfs:range :Zipcode .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#inLocation
+:inLocation rdf:type owl:ObjectProperty ;
+            rdfs:domain :Accident .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#inZipcode
+:inZipcode rdf:type owl:ObjectProperty ;
+           owl:inverseOf :wasAccidentOf ;
+           rdfs:domain :Accident ;
+           rdfs:range :Zipcode .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#isBoroughOf
+:isBoroughOf rdf:type owl:ObjectProperty ;
+             rdfs:domain :Borough ;
+             rdfs:range :Accident .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#isContributingFactorOf
+:isContributingFactorOf rdf:type owl:ObjectProperty ;
+                        rdfs:range :Accident .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#isLocationOf
+:isLocationOf rdf:type owl:ObjectProperty ;
+              rdfs:range :Borough .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#isVehicleTypeOf
+:isVehicleTypeOf rdf:type owl:ObjectProperty ;
+                 rdfs:domain :VehicleTypeValuePartition ;
+                 rdfs:range :Accident .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#isZipcodeOf
+:isZipcodeOf rdf:type owl:ObjectProperty ;
+             rdfs:domain :Zipcode ;
+             rdfs:range :Borough .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#wasAccidentOf
+:wasAccidentOf rdf:type owl:ObjectProperty ;
+               rdfs:range :Accident .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#Zipcode
+:Zipcode rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Accident ;
+         rdfs:range xsd:integer .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#hasCrashDate
+:hasCrashDate rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain :Accident ;
+              rdfs:range xsd:dateTime .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#hasPedestriansInjured
+:hasPedestriansInjured rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :Accident ;
+                       rdfs:range xsd:integer .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#hasPedestriansKilled
+:hasPedestriansKilled rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Accident ;
+                      rdfs:range xsd:integer .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#hasPersonsInjured
+:hasPersonsInjured rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Accident ;
+                   rdfs:range xsd:integer .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#hasPersonsKilled
+:hasPersonsKilled rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Accident ;
+                  rdfs:range xsd:integer .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#hasStreetName
+:hasStreetName rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Accident ;
+               rdfs:range xsd:string .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain :Accident ;
+                                              rdfs:range xsd:double .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#long
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain :Accident ;
+                                               rdfs:range xsd:double .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#Accident
+:Accident rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasCrashDate ;
+                            owl:someValuesFrom xsd:date
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
+                            owl:someValuesFrom xsd:double
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
+                            owl:someValuesFrom xsd:double
+                          ] ;
+          owl:disjointWith :Borough .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#Ambulance
+:Ambulance rdf:type owl:Class ;
+           rdfs:subClassOf :VehicleTypeValuePartition .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#Bike
+:Bike rdf:type owl:Class ;
+      rdfs:subClassOf :VehicleTypeValuePartition .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#Borough
+:Borough rdf:type owl:Class .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#BoxTruck
+:BoxTruck rdf:type owl:Class ;
+          rdfs:subClassOf :VehicleTypeValuePartition .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#Bronx
+:Bronx rdf:type owl:Class ;
+       rdfs:subClassOf :Borough .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#BronxAccident
+:BronxAccident rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( :Accident
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :hasBorough ;
+                                                            owl:someValuesFrom :Bronx
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#Brooklyn
+:Brooklyn rdf:type owl:Class ;
+          rdfs:subClassOf :Borough .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#BrooklynAccident
+:BrooklynAccident rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( :Accident
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :hasBorough ;
+                                                               owl:someValuesFrom :Brooklyn
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#Bus
+:Bus rdf:type owl:Class ;
+     rdfs:subClassOf :VehicleTypeValuePartition .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#ChassisCab
+:ChassisCab rdf:type owl:Class ;
+            rdfs:subClassOf :VehicleTypeValuePartition .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#ConcreteMixer
+:ConcreteMixer rdf:type owl:Class ;
+               rdfs:subClassOf :VehicleTypeValuePartition .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#E-bike
+:E-bike rdf:type owl:Class ;
+        rdfs:subClassOf :VehicleTypeValuePartition .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#E-scooter
+:E-scooter rdf:type owl:Class ;
+           rdfs:subClassOf :VehicleTypeValuePartition .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#Location
+:Location rdf:type owl:Class .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#Manhattan
+:Manhattan rdf:type owl:Class ;
+           rdfs:subClassOf :Borough .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#ManhattanAccident
+:ManhattanAccident rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( :Accident
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :hasBorough ;
+                                                                owl:someValuesFrom :Manhattan
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#Moped
+:Moped rdf:type owl:Class ;
+       rdfs:subClassOf :VehicleTypeValuePartition .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#MoreThanOneVehicleAccident
+:MoreThanOneVehicleAccident rdf:type owl:Class ;
+                            owl:equivalentClass [ owl:intersectionOf ( :VehicleAccident
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty :hasVehicleType ;
+                                                                         owl:minCardinality "2"^^xsd:nonNegativeInteger
+                                                                       ]
+                                                                     ) ;
+                                                  rdf:type owl:Class
+                                                ] .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#Motorbike
+:Motorbike rdf:type owl:Class ;
+           rdfs:subClassOf :VehicleTypeValuePartition .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#PedestriansInjuredAccident
+:PedestriansInjuredAccident rdf:type owl:Class ;
+                            owl:equivalentClass [ owl:intersectionOf ( :VehicleAccident
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty :hasPedestriansInjured ;
+                                                                         owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                              owl:onDatatype xsd:integer ;
+                                                                                              owl:withRestrictions ( [ xsd:minInclusive 1
+                                                                                                                     ]
+                                                                                                                   )
+                                                                                            ]
+                                                                       ]
+                                                                     ) ;
+                                                  rdf:type owl:Class
+                                                ] .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#PersonsInjuredAccident
+:PersonsInjuredAccident rdf:type owl:Class ;
+                        owl:equivalentClass [ owl:intersectionOf ( :VehicleAccident
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty :hasPersonsInjured ;
+                                                                     owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                          owl:onDatatype xsd:integer ;
+                                                                                          owl:withRestrictions ( [ xsd:minInclusive 1
+                                                                                                                 ]
+                                                                                                               )
+                                                                                        ]
+                                                                   ]
+                                                                 ) ;
+                                              rdf:type owl:Class
+                                            ] .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#Pick-upTruck
+:Pick-upTruck rdf:type owl:Class ;
+              rdfs:subClassOf :VehicleTypeValuePartition .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#Queens
+:Queens rdf:type owl:Class ;
+        rdfs:subClassOf :Borough .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#QueensAccident
+:QueensAccident rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( :Accident
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :hasBorough ;
+                                                             owl:someValuesFrom :Queens
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#Sedan
+:Sedan rdf:type owl:Class ;
+       rdfs:subClassOf :VehicleTypeValuePartition .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#SedanAccident
+:SedanAccident rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( :VehicleAccident
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :hasVehicleType ;
+                                                            owl:someValuesFrom :Sedan
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#StatenIsland
+:StatenIsland rdf:type owl:Class ;
+              rdfs:subClassOf :Borough .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#StatenIslandAccident
+:StatenIslandAccident rdf:type owl:Class ;
+                      owl:equivalentClass [ owl:intersectionOf ( :Accident
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :hasBorough ;
+                                                                   owl:someValuesFrom :StatenIsland
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ] .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#StationWagon
+:StationWagon rdf:type owl:Class ;
+              rdfs:subClassOf :VehicleTypeValuePartition .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#Taxi
+:Taxi rdf:type owl:Class ;
+      rdfs:subClassOf :VehicleTypeValuePartition .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#TractorTruckDiesel
+:TractorTruckDiesel rdf:type owl:Class ;
+                    rdfs:subClassOf :VehicleTypeValuePartition .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#TractorTruckGasoline
+:TractorTruckGasoline rdf:type owl:Class ;
+                      rdfs:subClassOf :VehicleTypeValuePartition .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#Van
+:Van rdf:type owl:Class ;
+     rdfs:subClassOf :VehicleTypeValuePartition .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#VanTruck
+:VanTruck rdf:type owl:Class ;
+          rdfs:subClassOf :VehicleTypeValuePartition .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#VehicleAccident
+:VehicleAccident rdf:type owl:Class ;
+                 rdfs:subClassOf :Accident ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasBorough ;
+                                   owl:allValuesFrom :Borough
+                                 ] .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#VehicleTypeValuePartition
+:VehicleTypeValuePartition rdf:type owl:Class .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#Zipcode
+:Zipcode rdf:type owl:Class .
+
+
+###  http://github.com/kawai924/SementicNYWeatherAccident/accident#3-Door
+<http://github.com/kawai924/SementicNYWeatherAccident/accident#3-Door> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf :VehicleTypeValuePartition .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Ambulance
+                :Bike
+                :BoxTruck
+                :Bus
+                :ChassisCab
+                :ConcreteMixer
+                :E-bike
+                :E-scooter
+                :Moped
+                :Motorbike
+                :Pick-upTruck
+                :Sedan
+                :StationWagon
+                :Taxi
+                :TractorTruckDiesel
+                :TractorTruckGasoline
+                :Van
+                :VanTruck
+                <http://github.com/kawai924/SementicNYWeatherAccident/accident#3-Door>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Bronx
+                :Brooklyn
+                :Manhattan
+                :Queens
+                :StatenIsland
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

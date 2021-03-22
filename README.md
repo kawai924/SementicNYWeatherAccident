@@ -5,4 +5,3 @@ Software requirement (used):\
 Python 3 (3.9)\
 pandas\
 rdflib
-
