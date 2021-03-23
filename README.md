@@ -14,8 +14,10 @@ git clone https://github.com/kawai924/SementicNYWeatherAccident.git
 
 2) Open the project in the file browser and unzip the ```venv.zip``` file
 
-
-3) Open the project in PyCharm and press `Run`
+3) Open the project in PyCharm 
+4) Pick your python interpreter `Python 3` in configuration
+   
+5) press `Run`
 ---
 ###Software requirement (used):
 Python 3 (3.9)\
