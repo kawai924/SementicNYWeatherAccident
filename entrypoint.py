@@ -12,7 +12,7 @@ if __name__ == '__main__':
     station.convert_to_rdf('data/csv/NY_station.csv', 'data/rdf/NYstation.rdf')
     print('Done with parsing weather station data!\n')
     print('Converting accident csv into rdf...')
-    accident.convert_to_rdf('data/csv/accident-NY-2020.csv', 'data/rdf/accident.rdf')
+    accident.convert_to_rdf('data/csv/accident-NY-2020.csv', 'data/rdf/NY_accident.rdf')
     print('Done with accident data!\n')
     print('Converting weather number csv into rdf...')
     weather.convert_to_rdf('data/csv/NY_weather_number_pivot.csv', 'data/rdf/NY_weather_number.rdf')
