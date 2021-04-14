@@ -1,0 +1,447 @@
+How many accidents in Queens could have been caused by Thunder in 2020? ---- Answer: 441
+
++-------------+------------+--------------------+-----------+---------------------+-----------------+-----------+--------------------------+
+| Accident    | Borough    | Location           | Zipcode   | Date                | Station ID      | Weather   | Station Type             |
+|-------------+------------+--------------------+-----------+---------------------+-----------------+-----------+--------------------------|
+| act:4340702 | act:Queens | act:40.704,-73.860 | act:11385 | 2020-08-19T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200819 |
+| act:4331109 | act:Queens | act:40.716,-73.744 | act:11428 | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4340543 | act:Queens | act:40.702,-73.746 | act:11411 | 2020-08-22T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200822 |
+| act:4340598 | act:Queens | act:40.730,-73.794 | act:11365 | 2020-08-22T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200822 |
+| act:4333758 | act:Queens | act:40.739,-73.721 | act:11426 | 2020-07-31T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200731 |
+| act:4335719 | act:Queens | act:40.760,-73.861 |           | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4333237 | act:Queens | act:40.768,-73.876 | act:11369 | 2020-07-23T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200723 |
+| act:4333407 | act:Queens | act:40.730,-73.815 | act:11367 | 2020-07-21T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200721 |
+| act:4344598 | act:Queens | act:40.725,-73.873 | act:11379 | 2020-09-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200903 |
+| act:4335443 | act:Queens | act:40.655,-73.732 | act:11422 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4344716 | act:Queens | act:40.755,-73.876 | act:11372 | 2020-09-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200903 |
+| act:4339698 | act:Queens | act:40.672,-73.851 | act:11417 | 2020-08-18T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200818 |
+| act:4333505 | act:Queens | act:40.747,-73.865 | act:11368 | 2020-07-30T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200730 |
+| act:4330908 | act:Queens | act:40.684,-73.803 | act:11436 | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4348446 | act:Queens | act:40.686,-73.855 | act:11421 | 2020-09-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200903 |
+| act:4330718 | act:Queens | act:40.748,-73.857 | act:11368 | 2020-07-21T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200721 |
+| act:4334014 | act:Queens | act:40.782,-73.912 | act:11105 | 2020-07-31T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200731 |
+| act:4344004 | act:Queens | act:40.748,-73.863 | act:11368 | 2020-08-27T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200827 |
+| act:4333339 | act:Queens | act:40.742,-73.867 | act:11368 | 2020-07-21T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200721 |
+| act:4339875 | act:Queens | act:40.707,-73.807 | act:11435 | 2020-08-19T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200819 |
+| act:4339914 | act:Queens | act:40.734,-73.938 | act:11101 | 2020-08-19T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200819 |
+| act:4337718 | act:Queens | act:40.706,-73.802 | act:11432 | 2020-08-12T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200812 |
+| act:4348449 | act:Queens | act:40.695,-73.861 | act:11421 | 2020-09-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200903 |
+| act:4331207 | act:Queens | act:40.671,-73.821 | act:11420 | 2020-07-23T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200723 |
+| act:4331490 | act:Queens | act:40.694,-73.743 | act:11411 | 2020-07-24T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200724 |
+| act:4340804 | act:Queens | act:40.691,-73.728 | act:11411 | 2020-08-19T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200819 |
+| act:4341116 | act:Queens | act:40.714,-73.754 | act:11423 | 2020-08-22T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200822 |
+| act:4336891 | act:Queens | act:40.707,-73.914 | act:11385 | 2020-08-07T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200807 |
+| act:4339237 | act:Queens | act:40.721,-73.846 | act:11375 | 2020-08-17T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200817 |
+| act:4341804 | act:Queens | act:40.754,-73.860 |           | 2020-08-25T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200825 |
+| act:4330288 | act:Queens | act:40.686,-73.794 | act:11436 | 2020-07-21T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200721 |
+| act:4335518 | act:Queens | act:40.743,-73.855 |           | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4352438 | act:Queens | act:40.758,-73.858 | act:11368 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4340179 | act:Queens | act:40.666,-73.730 | act:11422 | 2020-08-17T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200817 |
+| act:4340119 | act:Queens | act:40.665,-73.751 | act:11413 | 2020-08-19T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200819 |
+| act:4340999 | act:Queens | act:40.737,-73.856 | act:11368 | 2020-08-13T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200813 |
+| act:4338648 | act:Queens | act:40.714,-73.823 | act:11435 | 2020-08-12T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200812 |
+| act:4336852 | act:Queens | act:40.754,-73.897 | act:11377 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4340034 | act:Queens | act:40.753,-73.931 | act:11101 | 2020-07-30T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200730 |
+| act:4334912 | act:Queens | act:40.700,-73.792 | act:11433 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4340612 | act:Queens | act:40.752,-73.832 |           | 2020-08-22T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200822 |
+| act:4336187 | act:Queens | act:40.756,-73.787 | act:11358 | 2020-08-07T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200807 |
+| act:4331306 | act:Queens | act:40.738,-73.789 | act:11365 | 2020-07-24T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200724 |
+| act:4332276 | act:Queens | act:40.753,-73.856 | act:11368 | 2020-07-24T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200724 |
+| act:4335162 | act:Queens | act:40.731,-73.800 | act:11365 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4337451 | act:Queens | act:40.754,-73.898 | act:11377 | 2020-08-12T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200812 |
+| act:4334732 | act:Queens | act:40.676,-73.740 |           | 2020-08-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200803 |
+| act:4335945 | act:Queens | act:40.689,-73.796 | act:11435 | 2020-08-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200803 |
+| act:4336115 | act:Queens | act:40.660,-73.755 | act:11413 | 2020-08-07T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200807 |
+| act:4342599 | act:Queens | act:40.688,-73.857 | act:11421 | 2020-08-28T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200828 |
+| act:4335924 | act:Queens | act:40.666,-73.745 |           | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4345789 | act:Queens | act:40.693,-73.760 | act:11412 | 2020-09-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200903 |
+| act:4342519 | act:Queens | act:40.739,-73.921 | act:11377 | 2020-08-27T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200827 |
+| act:4338233 | act:Queens | act:40.726,-73.753 | act:11427 | 2020-08-13T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200813 |
+| act:4330815 | act:Queens | act:40.724,-73.904 | act:11378 | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4336181 | act:Queens | act:40.681,-73.763 | act:11434 | 2020-08-07T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200807 |
+| act:4336861 | act:Queens | act:40.754,-73.891 | act:11372 | 2020-08-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200803 |
+| act:4330672 | act:Queens | act:40.743,-73.884 | act:11373 | 2020-07-21T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200721 |
+| act:4335767 | act:Queens | act:40.739,-73.705 | act:11004 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4333615 | act:Queens | act:40.765,-73.823 | act:11354 | 2020-07-30T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200730 |
+| act:4343798 | act:Queens | act:40.755,-73.871 | act:11368 | 2020-08-12T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200812 |
+| act:4333360 | act:Queens | act:40.750,-73.862 | act:11368 | 2020-07-24T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200724 |
+| act:4338330 | act:Queens | act:40.749,-73.913 | act:11104 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4330850 | act:Queens | act:40.713,-73.910 | act:11385 | 2020-07-21T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200721 |
+| act:4334915 | act:Queens | act:40.703,-73.814 | act:11435 | 2020-08-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200803 |
+| act:4340481 | act:Queens | act:40.755,-73.890 | act:11372 | 2020-08-19T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200819 |
+| act:4348590 | act:Queens | act:40.688,-73.863 | act:11421 | 2020-09-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200903 |
+| act:4337272 | act:Queens | act:40.736,-73.856 |           | 2020-07-30T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200730 |
+| act:4339941 | act:Queens | act:40.665,-73.730 | act:11422 | 2020-08-17T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200817 |
+| act:4343682 | act:Queens | act:40.752,-73.859 | act:11368 | 2020-08-27T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200827 |
+| act:4341813 | act:Queens | act:40.756,-73.940 | act:11101 | 2020-08-25T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200825 |
+| act:4342637 | act:Queens | act:40.676,-73.789 | act:11434 | 2020-08-28T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200828 |
+| act:4336248 | act:Queens | act:40.744,-73.825 | act:11355 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4335226 | act:Queens | act:40.736,-73.889 | act:11377 | 2020-07-31T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200731 |
+| act:4335073 | act:Queens | act:40.714,-73.795 | act:11432 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4342668 | act:Queens | act:40.730,-73.742 | act:11427 | 2020-08-28T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200828 |
+| act:4340665 | act:Queens | act:40.757,-73.939 | act:11101 | 2020-08-19T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200819 |
+| act:4342422 | act:Queens | act:40.665,-73.754 | act:11413 | 2020-08-27T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200827 |
+| act:4351282 | act:Queens | act:40.712,-73.784 |           | 2020-08-27T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200827 |
+| act:4338609 | act:Queens | act:40.770,-73.931 | act:11102 | 2020-08-13T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200813 |
+| act:4338150 | act:Queens | act:40.707,-73.907 | act:11385 | 2020-08-13T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200813 |
+| act:4331305 | act:Queens | act:40.727,-73.786 | act:11432 | 2020-07-23T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200723 |
+| act:4330909 | act:Queens | act:40.692,-73.764 | act:11412 | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4341939 | act:Queens | act:40.757,-73.859 | act:11368 | 2020-08-25T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200825 |
+| act:4337854 | act:Queens | act:40.748,-73.941 | act:11101 | 2020-08-12T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200812 |
+| act:4342383 | act:Queens | act:40.680,-73.761 | act:11434 | 2020-08-27T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200827 |
+| act:4339233 | act:Queens | act:40.714,-73.824 | act:11435 | 2020-08-17T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200817 |
+| act:4332817 | act:Queens | act:40.690,-73.862 | act:11421 | 2020-07-23T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200723 |
+| act:4335335 | act:Queens | act:40.770,-73.916 |           | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4333681 | act:Queens | act:40.706,-73.817 | act:11435 | 2020-07-30T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200730 |
+| act:4346278 | act:Queens | act:40.763,-73.940 | act:11106 | 2020-09-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200903 |
+| act:4332176 | act:Queens | act:40.749,-73.900 | act:11377 | 2020-07-24T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200724 |
+| act:4331904 | act:Queens | act:40.670,-73.734 | act:11422 | 2020-07-23T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200723 |
+| act:4330831 | act:Queens | act:40.665,-73.763 | act:11413 | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4341088 | act:Queens | act:40.687,-73.827 | act:11419 | 2020-08-22T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200822 |
+| act:4332993 | act:Queens | act:40.699,-73.898 | act:11385 | 2020-07-21T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200721 |
+| act:4332226 | act:Queens | act:40.736,-73.858 | act:11368 | 2020-07-21T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200721 |
+| act:4344534 | act:Queens | act:40.581,-73.825 | act:11694 | 2020-09-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200903 |
+| act:4336294 | act:Queens | act:40.590,-73.796 | act:11692 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4332779 | act:Queens | act:40.768,-73.921 |           | 2020-07-23T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200723 |
+| act:4344569 | act:Queens | act:40.754,-73.812 | act:11355 | 2020-09-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200903 |
+| act:4338217 | act:Queens | act:40.747,-73.891 | act:11372 | 2020-08-13T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200813 |
+| act:4342005 | act:Queens | act:40.665,-73.823 | act:11434 | 2020-08-25T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200825 |
+| act:4333755 | act:Queens | act:40.714,-73.746 | act:11429 | 2020-07-31T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200731 |
+| act:4341034 | act:Queens | act:40.672,-73.838 | act:11417 | 2020-08-22T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200822 |
+| act:4337900 | act:Queens | act:40.733,-73.808 | act:11365 | 2020-08-13T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200813 |
+| act:4345846 | act:Queens | act:40.689,-73.802 | act:11435 | 2020-08-27T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200827 |
+| act:4330888 | act:Queens | act:40.728,-73.824 | act:11367 | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4335770 | act:Queens | act:40.741,-73.897 | act:11377 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4340666 | act:Queens | act:40.760,-73.922 | act:11106 | 2020-08-18T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200818 |
+| act:4335813 | act:Queens | act:40.754,-73.828 |           | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4333008 | act:Queens | act:40.704,-73.913 | act:11237 | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4338113 | act:Queens | act:40.687,-73.828 | act:11419 | 2020-08-13T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200813 |
+| act:4330905 | act:Queens | act:40.679,-73.791 | act:11434 | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4331558 | act:Queens | act:40.746,-73.942 | act:11101 | 2020-07-24T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200724 |
+| act:4339998 | act:Queens | act:40.708,-73.898 | act:11385 | 2020-08-19T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200819 |
+| act:4331486 | act:Queens | act:40.702,-73.751 | act:11412 | 2020-07-23T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200723 |
+| act:4335651 | act:Queens | act:40.665,-73.731 |           | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4335896 | act:Queens | act:40.727,-73.814 | act:11367 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4333729 | act:Queens | act:40.705,-73.780 | act:11412 | 2020-07-31T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200731 |
+| act:4330445 | act:Queens | act:40.690,-73.735 | act:11411 | 2020-07-21T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200721 |
+| act:4338212 | act:Queens | act:40.755,-73.895 | act:11372 | 2020-08-13T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200813 |
+| act:4340476 | act:Queens | act:40.749,-73.869 | act:11368 | 2020-08-19T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200819 |
+| act:4344726 | act:Queens | act:40.745,-73.953 | act:11101 | 2020-09-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200903 |
+| act:4333521 | act:Queens | act:40.748,-73.857 | act:11368 | 2020-07-30T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200730 |
+| act:4333320 | act:Queens | act:40.757,-73.880 | act:11369 | 2020-07-23T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200723 |
+| act:4330687 | act:Queens | act:40.749,-73.887 | act:11372 | 2020-07-21T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200721 |
+| act:4332433 | act:Queens | act:40.763,-73.934 |           | 2020-07-23T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200723 |
+| act:4331785 | act:Queens | act:40.747,-73.889 | act:11373 | 2020-07-23T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200723 |
+| act:4340039 | act:Queens | act:40.756,-73.925 | act:11106 | 2020-08-19T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200819 |
+| act:4337720 | act:Queens | act:40.766,-73.806 | act:11358 | 2020-08-12T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200812 |
+| act:4339943 | act:Queens | act:40.772,-73.827 | act:11354 | 2020-08-19T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200819 |
+| act:4336175 | act:Queens | act:40.726,-73.811 | act:11366 | 2020-08-07T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200807 |
+| act:4330767 | act:Queens | act:40.754,-73.921 | act:11101 | 2020-07-21T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200721 |
+| act:4335721 | act:Queens | act:40.752,-73.859 | act:11368 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4342523 | act:Queens | act:40.744,-73.926 | act:11101 | 2020-08-27T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200827 |
+| act:4342650 | act:Queens | act:40.731,-73.746 | act:11427 | 2020-08-28T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200828 |
+| act:4334452 | act:Queens | act:40.738,-73.852 |           | 2020-07-31T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200731 |
+| act:4333765 | act:Queens | act:40.728,-73.832 |           | 2020-07-31T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200731 |
+| act:4333819 | act:Queens | act:40.667,-73.805 | act:11420 | 2020-07-31T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200731 |
+| act:4335041 | act:Queens | act:40.695,-73.739 | act:11411 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4341726 | act:Queens | act:40.742,-73.908 | act:11377 | 2020-08-25T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200825 |
+| act:4337239 | act:Queens | act:40.704,-73.897 | act:11385 | 2020-08-07T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200807 |
+| act:4335740 | act:Queens | act:40.706,-73.871 | act:11385 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4335299 | act:Queens | act:40.665,-73.736 | act:11422 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4333392 | act:Queens | act:40.754,-73.744 |           | 2020-07-30T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200730 |
+| act:4344646 | act:Queens | act:40.767,-73.930 |           | 2020-09-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200903 |
+| act:4335975 | act:Queens | act:40.605,-73.755 | act:11691 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4331262 | act:Queens | act:40.696,-73.888 | act:11385 | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4341660 | act:Queens | act:40.665,-73.745 | act:11413 | 2020-08-25T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200825 |
+| act:4331079 | act:Queens | act:40.666,-73.835 |           | 2020-07-23T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200723 |
+| act:4335677 | act:Queens | act:40.678,-73.755 | act:11413 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4332333 | act:Queens | act:40.770,-73.871 | act:11369 | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4336182 | act:Queens | act:40.692,-73.768 | act:11434 | 2020-08-07T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200807 |
+| act:4338222 | act:Queens | act:40.758,-73.875 | act:11369 | 2020-07-31T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200731 |
+| act:4341723 | act:Queens | act:40.752,-73.827 |           | 2020-08-25T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200825 |
+| act:4331104 | act:Queens | act:40.725,-73.754 | act:11427 | 2020-07-23T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200723 |
+| act:4337901 | act:Queens | act:40.772,-73.919 |           | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4333462 | act:Queens | act:40.736,-73.717 | act:11426 | 2020-07-30T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200730 |
+| act:4339467 | act:Queens | act:40.708,-73.801 | act:11432 | 2020-08-18T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200818 |
+| act:4333508 | act:Queens | act:40.765,-73.829 | act:11354 | 2020-07-30T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200730 |
+| act:4342397 | act:Queens | act:40.675,-73.825 | act:11420 | 2020-08-27T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200827 |
+| act:4341770 | act:Queens | act:40.727,-73.796 | act:11366 | 2020-08-25T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200825 |
+| act:4342545 | act:Queens | act:40.750,-73.938 | act:11101 | 2020-07-30T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200730 |
+| act:4341114 | act:Queens | act:40.738,-73.879 | act:11373 | 2020-08-22T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200822 |
+| act:4331214 | act:Queens | act:40.688,-73.820 | act:11419 | 2020-07-23T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200723 |
+| act:4334170 | act:Queens | act:40.704,-73.830 | act:11415 | 2020-07-30T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200730 |
+| act:4344729 | act:Queens | act:40.737,-73.900 | act:11377 | 2020-09-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200903 |
+| act:4335555 | act:Queens | act:40.689,-73.828 | act:11419 | 2020-08-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200803 |
+| act:4337951 | act:Queens | act:40.608,-73.819 | act:11693 | 2020-08-13T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200813 |
+| act:4345152 | act:Queens | act:40.749,-73.867 | act:11368 | 2020-09-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200903 |
+| act:4338069 | act:Queens | act:40.677,-73.748 | act:11413 | 2020-08-13T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200813 |
+| act:4335751 | act:Queens | act:40.729,-73.875 | act:11379 | 2020-08-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200803 |
+| act:4341727 | act:Queens | act:40.749,-73.937 | act:11101 | 2020-08-25T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200825 |
+| act:4342402 | act:Queens | act:40.578,-73.860 |           | 2020-08-27T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200827 |
+| act:4331057 | act:Queens | act:40.747,-73.950 | act:11101 | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4334153 | act:Queens | act:40.709,-73.831 | act:11415 | 2020-07-31T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200731 |
+| act:4341094 | act:Queens | act:40.675,-73.804 |           | 2020-08-22T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200822 |
+| act:4333503 | act:Queens | act:40.782,-73.837 | act:11356 | 2020-07-30T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200730 |
+| act:4339169 | act:Queens | act:40.714,-73.738 | act:11429 | 2020-08-17T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200817 |
+| act:4339629 | act:Queens | act:40.718,-73.816 | act:11367 | 2020-08-18T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200818 |
+| act:4340045 | act:Queens | act:40.733,-73.868 |           | 2020-08-19T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200819 |
+| act:4339362 | act:Queens | act:40.681,-73.851 |           | 2020-08-17T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200817 |
+| act:4342522 | act:Queens | act:40.745,-73.918 | act:11104 | 2020-08-27T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200827 |
+| act:4337742 | act:Queens | act:40.667,-73.767 | act:11434 | 2020-08-12T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200812 |
+| act:4336028 | act:Queens | act:40.727,-73.810 | act:11366 | 2020-08-07T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200807 |
+| act:4338576 | act:Queens | act:40.716,-73.824 | act:11435 | 2020-08-13T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200813 |
+| act:4335699 | act:Queens | act:40.681,-73.843 | act:11417 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4334650 | act:Queens | act:40.669,-73.803 | act:11420 | 2020-08-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200803 |
+| act:4348563 | act:Queens | act:40.695,-73.826 | act:11418 | 2020-08-27T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200827 |
+| act:4333749 | act:Queens | act:40.701,-73.790 | act:11433 | 2020-07-31T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200731 |
+| act:4340379 | act:Queens | act:40.710,-73.800 | act:11432 | 2020-08-19T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200819 |
+| act:4341767 | act:Queens | act:40.723,-73.837 | act:11375 | 2020-08-25T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200825 |
+| act:4336114 | act:Queens | act:40.659,-73.737 | act:11422 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4341771 | act:Queens | act:40.754,-73.929 | act:11101 | 2020-08-25T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200825 |
+| act:4335045 | act:Queens | act:40.700,-73.765 | act:11412 | 2020-08-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200803 |
+| act:4333176 | act:Queens | act:40.740,-73.935 | act:11101 | 2020-07-30T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200730 |
+| act:4331456 | act:Queens | act:40.727,-73.803 | act:11366 | 2020-07-24T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200724 |
+| act:4342406 | act:Queens | act:40.704,-73.816 | act:11435 | 2020-08-27T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200827 |
+| act:4331323 | act:Queens | act:40.727,-73.907 | act:11378 | 2020-07-24T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200724 |
+| act:4339648 | act:Queens | act:40.765,-73.811 | act:11354 | 2020-08-18T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200818 |
+| act:4331338 | act:Queens | act:40.756,-73.834 |           | 2020-07-24T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200724 |
+| act:4342435 | act:Queens | act:40.766,-73.837 | act:11354 | 2020-08-27T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200827 |
+| act:4333780 | act:Queens | act:40.667,-73.735 | act:11422 | 2020-07-31T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200731 |
+| act:4339201 | act:Queens | act:40.685,-73.766 | act:11434 | 2020-08-17T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200817 |
+| act:4336186 | act:Queens | act:40.748,-73.761 | act:11364 | 2020-08-07T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200807 |
+| act:4333474 | act:Queens | act:40.737,-73.781 | act:11365 | 2020-07-30T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200730 |
+| act:4339960 | act:Queens | act:40.684,-73.826 | act:11419 | 2020-08-19T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200819 |
+| act:4330629 | act:Queens | act:40.665,-73.746 | act:11413 | 2020-07-21T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200721 |
+| act:4337883 | act:Queens | act:40.698,-73.853 | act:11421 | 2020-08-13T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200813 |
+| act:4340687 | act:Queens | act:40.767,-73.888 |           | 2020-08-22T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200822 |
+| act:4342769 | act:Queens | act:40.791,-73.810 | act:11357 | 2020-08-27T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200827 |
+| act:4342372 | act:Queens | act:40.764,-73.790 | act:11358 | 2020-08-27T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200827 |
+| act:4330418 | act:Queens | act:40.713,-73.901 | act:11385 | 2020-07-21T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200721 |
+| act:4330970 | act:Queens | act:40.685,-73.820 | act:11419 | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4339994 | act:Queens | act:40.699,-73.904 | act:11385 | 2020-08-18T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200818 |
+| act:4335000 | act:Queens | act:40.702,-73.782 | act:11433 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4336239 | act:Queens | act:40.734,-73.863 |           | 2020-08-07T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200807 |
+| act:4335785 | act:Queens | act:40.712,-73.891 | act:11379 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4341728 | act:Queens | act:40.750,-73.904 | act:11377 | 2020-08-25T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200825 |
+| act:4339554 | act:Queens | act:40.712,-73.731 | act:11429 | 2020-08-18T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200818 |
+| act:4330790 | act:Queens | act:40.758,-73.828 | act:11355 | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4339904 | act:Queens | act:40.728,-73.859 | act:11374 | 2020-08-19T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200819 |
+| act:4335030 | act:Queens | act:40.694,-73.730 | act:11411 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4340883 | act:Queens | act:40.695,-73.758 | act:11412 | 2020-08-22T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200822 |
+| act:4337904 | act:Queens | act:40.713,-73.802 | act:11432 | 2020-08-12T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200812 |
+| act:4335495 | act:Queens | act:40.761,-73.910 | act:11103 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4331679 | act:Queens | act:40.761,-73.917 | act:11103 | 2020-07-24T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200724 |
+| act:4336101 | act:Queens | act:40.701,-73.855 |           | 2020-08-07T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200807 |
+| act:4335969 | act:Queens | act:40.724,-73.755 |           | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4339438 | act:Queens | act:40.680,-73.851 | act:11417 | 2020-08-18T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200818 |
+| act:4340049 | act:Queens | act:40.749,-73.937 | act:11101 | 2020-08-12T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200812 |
+| act:4332061 | act:Queens | act:40.608,-73.754 | act:11691 | 2020-07-24T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200724 |
+| act:4341108 | act:Queens | act:40.735,-73.872 | act:11373 | 2020-08-22T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200822 |
+| act:4331165 | act:Queens | act:40.749,-73.815 | act:11355 | 2020-07-23T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200723 |
+| act:4342467 | act:Queens | act:40.707,-73.825 | act:11415 | 2020-08-27T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200827 |
+| act:4336240 | act:Queens | act:40.754,-73.723 |           | 2020-07-31T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200731 |
+| act:4335320 | act:Queens | act:40.696,-73.784 | act:11433 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4331781 | act:Queens | act:40.705,-73.914 | act:11385 | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4340555 | act:Queens | act:40.739,-73.820 | act:11367 | 2020-08-22T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200822 |
+| act:4342905 | act:Queens | act:40.699,-73.910 | act:11385 | 2020-08-27T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200827 |
+| act:4330635 | act:Queens | act:40.766,-73.804 | act:11358 | 2020-07-21T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200721 |
+| act:4344459 | act:Queens | act:40.702,-73.790 | act:11433 | 2020-08-25T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200825 |
+| act:4333757 | act:Queens | act:40.678,-73.745 | act:11413 | 2020-07-31T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200731 |
+| act:4342326 | act:Queens | act:40.754,-73.914 |           | 2020-07-24T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200724 |
+| act:4331252 | act:Queens | act:40.702,-73.728 | act:11411 | 2020-07-24T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200724 |
+| act:4339230 | act:Queens | act:40.735,-73.738 | act:11427 | 2020-08-17T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200817 |
+| act:4335862 | act:Queens | act:40.681,-73.840 | act:11417 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4335089 | act:Queens | act:40.695,-73.738 | act:11411 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4342039 | act:Queens | act:40.701,-73.894 |           | 2020-08-25T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200825 |
+| act:4336856 | act:Queens | act:40.735,-73.734 | act:11427 | 2020-07-24T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200724 |
+| act:4339588 | act:Queens | act:40.734,-73.863 |           | 2020-08-13T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200813 |
+| act:4334162 | act:Queens | act:40.704,-73.822 | act:11418 | 2020-07-31T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200731 |
+| act:4334661 | act:Queens | act:40.747,-73.863 | act:11368 | 2020-08-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200803 |
+| act:4334699 | act:Queens | act:40.700,-73.821 | act:11418 | 2020-08-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200803 |
+| act:4342619 | act:Queens | act:40.710,-73.760 | act:11423 | 2020-08-27T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200827 |
+| act:4336172 | act:Queens | act:40.700,-73.812 | act:11435 | 2020-08-07T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200807 |
+| act:4336632 | act:Queens | act:40.759,-73.919 | act:11103 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4341763 | act:Queens | act:40.715,-73.790 | act:11432 | 2020-08-25T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200825 |
+| act:4341036 | act:Queens | act:40.664,-73.841 | act:11414 | 2020-08-22T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200822 |
+| act:4337931 | act:Queens | act:40.664,-73.734 | act:11422 | 2020-08-13T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200813 |
+| act:4341733 | act:Queens | act:40.699,-73.770 | act:11412 | 2020-08-25T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200825 |
+| act:4333771 | act:Queens | act:40.708,-73.803 |           | 2020-07-31T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200731 |
+| act:4343393 | act:Queens | act:40.714,-73.792 | act:11432 | 2020-08-27T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200827 |
+| act:4333815 | act:Queens | act:40.743,-73.894 | act:11377 | 2020-07-31T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200731 |
+| act:4337695 | act:Queens | act:40.667,-73.761 | act:11413 | 2020-08-12T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200812 |
+| act:4331321 | act:Queens | act:40.745,-73.953 | act:11101 | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4344451 | act:Queens | act:40.737,-73.801 | act:11365 | 2020-09-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200903 |
+| act:4336451 | act:Queens | act:40.722,-73.855 | act:11375 | 2020-08-07T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200807 |
+| act:4332243 | act:Queens | act:40.710,-73.830 | act:11415 | 2020-07-21T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200721 |
+| act:4333412 | act:Queens | act:40.694,-73.781 | act:11433 | 2020-07-30T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200730 |
+| act:4336754 | act:Queens | act:40.744,-73.886 | act:11373 | 2020-08-07T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200807 |
+| act:4337882 | act:Queens | act:40.701,-73.816 | act:11418 | 2020-08-13T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200813 |
+| act:4330889 | act:Queens | act:40.714,-73.749 | act:11429 | 2020-07-21T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200721 |
+| act:4331164 | act:Queens | act:40.786,-73.853 | act:11356 | 2020-07-23T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200723 |
+| act:4341646 | act:Queens | act:40.743,-73.828 |           | 2020-08-25T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200825 |
+| act:4339419 | act:Queens | act:40.739,-73.851 | act:11368 | 2020-08-17T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200817 |
+| act:4336353 | act:Queens | act:40.760,-73.830 | act:11354 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4331180 | act:Queens | act:40.751,-73.771 | act:11364 | 2020-07-23T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200723 |
+| act:4344517 | act:Queens | act:40.673,-73.790 |           | 2020-09-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200903 |
+| act:4342043 | act:Queens | act:40.696,-73.789 | act:11433 | 2020-08-25T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200825 |
+| act:4331055 | act:Queens | act:40.741,-73.899 |           | 2020-07-21T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200721 |
+| act:4335900 | act:Queens | act:40.733,-73.792 | act:11365 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4335351 | act:Queens | act:40.721,-73.867 | act:11379 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4336898 | act:Queens | act:40.704,-73.882 | act:11385 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4332205 | act:Queens | act:40.769,-73.925 | act:11102 | 2020-07-21T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200721 |
+| act:4344659 | act:Queens | act:40.725,-73.754 | act:11427 | 2020-09-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200903 |
+| act:4334637 | act:Queens | act:40.746,-73.899 | act:11377 | 2020-07-23T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200723 |
+| act:4334738 | act:Queens | act:40.747,-73.854 | act:11368 | 2020-08-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200803 |
+| act:4342918 | act:Queens | act:40.696,-73.905 | act:11385 | 2020-08-12T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200812 |
+| act:4330801 | act:Queens | act:40.768,-73.876 | act:11369 | 2020-07-21T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200721 |
+| act:4332580 | act:Queens | act:40.757,-73.935 | act:11101 | 2020-07-21T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200721 |
+| act:4336720 | act:Queens | act:40.600,-73.757 | act:11691 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4335024 | act:Queens | act:40.731,-73.795 | act:11365 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4334641 | act:Queens | act:40.709,-73.790 | act:11432 | 2020-07-31T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200731 |
+| act:4340696 | act:Queens | act:40.730,-73.887 | act:11373 | 2020-08-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200803 |
+| act:4340223 | act:Queens | act:40.668,-73.842 |           | 2020-08-18T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200818 |
+| act:4331811 | act:Queens | act:40.730,-73.897 | act:11378 | 2020-07-24T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200724 |
+| act:4334980 | act:Queens | act:40.722,-73.819 | act:11367 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4340607 | act:Queens | act:40.745,-73.836 |           | 2020-08-22T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200822 |
+| act:4334649 | act:Queens | act:40.745,-73.836 | act:11355 | 2020-08-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200803 |
+| act:4331472 | act:Queens | act:40.715,-73.832 | act:11375 | 2020-07-23T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200723 |
+| act:4337095 | act:Queens | act:40.723,-73.852 | act:11375 | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4331434 | act:Queens | act:40.756,-73.878 | act:11372 | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4330904 | act:Queens | act:40.660,-73.774 |           | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4333468 | act:Queens | act:40.740,-73.894 | act:11377 | 2020-07-30T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200730 |
+| act:4341981 | act:Queens | act:40.693,-73.777 | act:11433 | 2020-08-22T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200822 |
+| act:4342038 | act:Queens | act:40.697,-73.813 | act:11418 | 2020-08-22T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200822 |
+| act:4342385 | act:Queens | act:40.681,-73.773 | act:11434 | 2020-08-27T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200827 |
+| act:4339888 | act:Queens | act:40.660,-73.774 | act:11434 | 2020-08-19T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200819 |
+| act:4334894 | act:Queens | act:40.598,-73.785 | act:11691 | 2020-07-31T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200731 |
+| act:4333342 | act:Queens | act:40.754,-73.879 | act:11372 | 2020-07-30T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200730 |
+| act:4340480 | act:Queens | act:40.754,-73.860 |           | 2020-08-12T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200812 |
+| act:4335034 | act:Queens | act:40.744,-73.783 | act:11365 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4334728 | act:Queens | act:40.684,-73.746 | act:11413 | 2020-08-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200803 |
+| act:4340582 | act:Queens | act:40.665,-73.736 | act:11422 | 2020-08-22T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200822 |
+| act:4342561 | act:Queens | act:40.772,-73.933 | act:11102 | 2020-08-28T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200828 |
+| act:4334541 | act:Queens | act:40.606,-73.769 | act:11691 | 2020-08-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200803 |
+| act:4337894 | act:Queens | act:40.728,-73.871 | act:11374 | 2020-08-13T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200813 |
+| act:4331632 | act:Queens | act:40.724,-73.815 | act:11367 | 2020-07-24T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200724 |
+| act:4339942 | act:Queens | act:40.566,-73.882 | act:11695 | 2020-08-19T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200819 |
+| act:4336417 | act:Queens | act:40.593,-73.796 | act:11692 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4344652 | act:Queens | act:40.727,-73.716 | act:11426 | 2020-09-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200903 |
+| act:4330914 | act:Queens | act:40.741,-73.903 | act:11377 | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4333499 | act:Queens | act:40.747,-73.901 | act:11377 | 2020-07-30T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200730 |
+| act:4333284 | act:Queens | act:40.583,-73.835 | act:11694 | 2020-07-21T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200721 |
+| act:4330440 | act:Queens | act:40.667,-73.856 | act:11414 | 2020-07-21T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200721 |
+| act:4336178 | act:Queens | act:40.720,-73.809 | act:11366 | 2020-08-07T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200807 |
+| act:4348616 | act:Queens | act:40.693,-73.854 | act:11421 | 2020-09-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200903 |
+| act:4335322 | act:Queens | act:40.708,-73.801 | act:11432 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4336844 | act:Queens | act:40.752,-73.868 | act:11368 | 2020-08-07T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200807 |
+| act:4332816 | act:Queens | act:40.713,-73.829 | act:11415 | 2020-07-23T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200723 |
+| act:4335725 | act:Queens | act:40.761,-73.885 | act:11370 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4337892 | act:Queens | act:40.725,-73.870 | act:11374 | 2020-08-13T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200813 |
+| act:4335498 | act:Queens | act:40.757,-73.913 | act:11103 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4339462 | act:Queens | act:40.731,-73.783 | act:11366 | 2020-08-18T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200818 |
+| act:4335749 | act:Queens | act:40.702,-73.882 | act:11385 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4335656 | act:Queens | act:40.701,-73.741 | act:11411 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4336644 | act:Queens | act:40.747,-73.865 | act:11368 | 2020-08-07T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200807 |
+| act:4340608 | act:Queens | act:40.769,-73.827 | act:11354 | 2020-08-22T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200822 |
+| act:4336117 | act:Queens | act:40.663,-73.756 | act:11413 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4337739 | act:Queens | act:40.722,-73.734 | act:11428 | 2020-08-12T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200812 |
+| act:4335884 | act:Queens | act:40.760,-73.732 | act:11362 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4331411 | act:Queens | act:40.714,-73.761 | act:11423 | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4331468 | act:Queens | act:40.717,-73.855 | act:11375 | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4337947 | act:Queens | act:40.746,-73.929 | act:11101 | 2020-08-13T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200813 |
+| act:4340703 | act:Queens | act:40.701,-73.907 | act:11385 | 2020-08-22T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200822 |
+| act:4345153 | act:Queens | act:40.747,-73.886 | act:11372 | 2020-09-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200903 |
+| act:4341722 | act:Queens | act:40.757,-73.813 | act:11355 | 2020-08-25T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200825 |
+| act:4336873 | act:Queens | act:40.758,-73.894 | act:11370 | 2020-08-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200803 |
+| act:4330845 | act:Queens | act:40.759,-73.783 | act:11361 | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4334429 | act:Queens | act:40.744,-73.901 | act:11377 | 2020-08-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200803 |
+| act:4332639 | act:Queens | act:40.763,-73.927 | act:11106 | 2020-07-24T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200724 |
+| act:4339596 | act:Queens | act:40.714,-73.919 | act:11385 | 2020-08-17T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200817 |
+| act:4339708 | act:Queens | act:40.783,-73.846 | act:11356 | 2020-08-18T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200818 |
+| act:4335959 | act:Queens | act:40.595,-73.756 | act:11691 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4337870 | act:Queens | act:40.689,-73.763 | act:11412 | 2020-08-12T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200812 |
+| act:4340741 | act:Queens | act:40.765,-73.912 | act:11103 | 2020-08-22T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200822 |
+| act:4335731 | act:Queens | act:40.759,-73.868 | act:11369 | 2020-08-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200803 |
+| act:4339243 | act:Queens | act:40.725,-73.760 | act:11427 | 2020-08-17T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200817 |
+| act:4340924 | act:Queens | act:40.700,-73.841 | act:11418 | 2020-08-19T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200819 |
+| act:4331102 | act:Queens | act:40.734,-73.863 | act:11374 | 2020-07-23T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200723 |
+| act:4333746 | act:Queens | act:40.736,-73.856 |           | 2020-07-31T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200731 |
+| act:4339207 | act:Queens | act:40.742,-73.908 | act:11377 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4334055 | act:Queens | act:40.713,-73.906 | act:11385 | 2020-07-30T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200730 |
+| act:4336682 | act:Queens | act:40.741,-73.890 | act:11373 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4335717 | act:Queens | act:40.757,-73.897 | act:11370 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4337148 | act:Queens | act:40.704,-73.780 | act:11433 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4340633 | act:Queens | act:40.766,-73.790 | act:11358 | 2020-08-22T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200822 |
+| act:4342361 | act:Queens | act:40.761,-73.869 | act:11369 | 2020-08-25T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200825 |
+| act:4342744 | act:Queens | act:40.695,-73.785 | act:11433 | 2020-08-18T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200818 |
+| act:4330903 | act:Queens | act:40.668,-73.784 | act:11434 | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4335730 | act:Queens | act:40.759,-73.896 | act:11370 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4339437 | act:Queens | act:40.676,-73.808 | act:11420 | 2020-08-18T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200818 |
+| act:4331801 | act:Queens | act:40.745,-73.879 | act:11373 | 2020-07-24T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200724 |
+| act:4336198 | act:Queens | act:40.716,-73.737 | act:11429 | 2020-08-07T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200807 |
+| act:4344692 | act:Queens | act:40.705,-73.915 |           | 2020-08-27T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200827 |
+| act:4331025 | act:Queens | act:40.712,-73.891 | act:11379 | 2020-07-23T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200723 |
+| act:4339755 | act:Queens | act:40.768,-73.904 | act:11377 | 2020-08-18T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200818 |
+| act:4332818 | act:Queens | act:40.690,-73.841 | act:11418 | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4340546 | act:Queens | act:40.754,-73.868 | act:11368 | 2020-08-22T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200822 |
+| act:4333941 | act:Queens | act:40.789,-73.841 | act:11356 | 2020-07-31T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200731 |
+| act:4330679 | act:Queens | act:40.680,-73.817 | act:11420 | 2020-07-21T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200721 |
+| act:4337863 | act:Queens | act:40.745,-73.938 | act:11101 | 2020-08-12T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200812 |
+| act:4342845 | act:Queens | act:40.746,-73.896 | act:11377 | 2020-08-28T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200828 |
+| act:4333838 | act:Queens | act:40.667,-73.738 | act:11422 | 2020-07-31T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200731 |
+| act:4342829 | act:Queens | act:40.760,-73.906 | act:11377 | 2020-08-27T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200827 |
+| act:4335895 | act:Queens | act:40.757,-73.930 | act:11106 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4339417 | act:Queens | act:40.667,-73.767 | act:11434 | 2020-08-18T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200818 |
+| act:4339860 | act:Queens | act:40.746,-73.823 | act:11355 | 2020-08-19T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200819 |
+| act:4331638 | act:Queens | act:40.769,-73.900 | act:11370 | 2020-07-23T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200723 |
+| act:4344219 | act:Queens | act:40.763,-73.830 | act:11354 | 2020-09-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200903 |
+| act:4330439 | act:Queens | act:40.675,-73.858 | act:11417 | 2020-07-21T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200721 |
+| act:4333666 | act:Queens | act:40.767,-73.921 | act:11102 | 2020-07-31T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200731 |
+| act:4341253 | act:Queens | act:40.696,-73.793 |           | 2020-08-22T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200822 |
+| act:4344660 | act:Queens | act:40.660,-73.751 | act:11413 | 2020-09-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200903 |
+| act:4330929 | act:Queens | act:40.652,-73.739 | act:11422 | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4339845 | act:Queens | act:40.666,-73.758 |           | 2020-08-19T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200819 |
+| act:4330517 | act:Queens | act:40.710,-73.914 | act:11385 | 2020-07-21T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200721 |
+| act:4341934 | act:Queens | act:40.759,-73.867 | act:11369 | 2020-08-25T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200825 |
+| act:4343449 | act:Queens | act:40.693,-73.803 | act:11435 | 2020-08-28T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200828 |
+| act:4333511 | act:Queens | act:40.743,-73.891 | act:11377 | 2020-07-30T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200730 |
+| act:4340048 | act:Queens | act:40.757,-73.905 | act:11377 | 2020-08-07T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200807 |
+| act:4334099 | act:Queens | act:40.583,-73.817 | act:11693 | 2020-07-31T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200731 |
+| act:4334527 | act:Queens | act:40.682,-73.728 | act:11422 | 2020-08-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200803 |
+| act:4342473 | act:Queens | act:40.712,-73.825 |           | 2020-08-27T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200827 |
+| act:4348150 | act:Queens | act:40.685,-73.793 |           | 2020-08-28T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200828 |
+| act:4342407 | act:Queens | act:40.738,-73.877 | act:11373 | 2020-08-27T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200827 |
+| act:4341407 | act:Queens | act:40.673,-73.774 | act:11434 | 2020-08-22T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200822 |
+| act:4341789 | act:Queens | act:40.666,-73.761 |           | 2020-08-25T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200825 |
+| act:4338094 | act:Queens | act:40.755,-73.824 | act:11355 | 2020-08-13T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200813 |
+| act:4339885 | act:Queens | act:40.735,-73.709 | act:11001 | 2020-08-18T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200818 |
+| act:4335883 | act:Queens | act:40.740,-73.751 | act:11364 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4342006 | act:Queens | act:40.671,-73.856 | act:11414 | 2020-08-25T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200825 |
+| act:4334428 | act:Queens | act:40.741,-73.899 | act:11377 | 2020-07-30T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200730 |
+| act:4331094 | act:Queens | act:40.759,-73.789 | act:11358 | 2020-07-23T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200723 |
+| act:4335004 | act:Queens | act:40.765,-73.803 | act:11358 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4344282 | act:Queens | act:40.676,-73.861 | act:11208 | 2020-09-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200903 |
+| act:4342578 | act:Queens | act:40.749,-73.954 | act:11101 | 2020-08-28T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200828 |
+| act:4342328 | act:Queens | act:40.773,-73.923 | act:11102 | 2020-08-25T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200825 |
+| act:4330817 | act:Queens | act:40.705,-73.888 | act:11385 | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4330956 | act:Queens | act:40.742,-73.873 | act:11373 | 2020-07-22T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200722 |
+| act:4339149 | act:Queens | act:40.714,-73.772 | act:11423 | 2020-08-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200803 |
+| act:4341974 | act:Queens | act:40.697,-73.762 | act:11412 | 2020-08-25T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200825 |
+| act:4334665 | act:Queens | act:40.737,-73.878 | act:11373 | 2020-08-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200803 |
+| act:4344595 | act:Queens | act:40.712,-73.919 | act:11385 | 2020-09-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200903 |
+| act:4335339 | act:Queens | act:40.764,-73.915 | act:11103 | 2020-08-04T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200804 |
+| act:4337868 | act:Queens | act:40.677,-73.759 | act:11413 | 2020-08-12T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200812 |
+| act:4335748 | act:Queens | act:40.705,-73.877 | act:11385 | 2020-08-03T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200803 |
+| act:4333349 | act:Queens | act:40.756,-73.880 | act:11372 | 2020-07-30T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200730 |
+| act:4339420 | act:Queens | act:40.742,-73.867 | act:11368 | 2020-08-17T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200817 |
+| act:4335861 | act:Queens | act:40.714,-73.737 | act:11429 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4336118 | act:Queens | act:40.731,-73.743 | act:11427 | 2020-08-07T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200807 |
+| act:4336352 | act:Queens | act:40.750,-73.819 | act:11355 | 2020-08-06T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200806 |
+| act:4340124 | act:Queens | act:40.696,-73.805 |           | 2020-08-19T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200819 |
+| act:4336815 | act:Queens | act:40.682,-73.837 | act:11417 | 2020-08-07T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200807 |
+| act:4341918 | act:Queens | act:40.752,-73.878 | act:11372 | 2020-08-17T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200817 |
+| act:4342564 | act:Queens | act:40.706,-73.818 | act:11418 | 2020-08-28T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200828 |
+| act:4340622 | act:Queens | act:40.691,-73.728 | act:11411 | 2020-08-19T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200819 |
+| act:4340477 | act:Queens | act:40.754,-73.855 | act:11368 | 2020-08-19T00:00:00 | sta:USW00094789 | Thunder   | wea:USW00094789/20200819 |
+| act:4341556 | act:Queens | act:40.756,-73.864 | act:11368 | 2020-08-22T00:00:00 | sta:USW00014732 | Thunder   | wea:USW00014732/20200822 |
++-------------+------------+--------------------+-----------+---------------------+-----------------+-----------+--------------------------+
