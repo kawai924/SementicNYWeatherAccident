@@ -2,6 +2,7 @@ import pandas as pd
 from iribaker import to_iri
 from rdflib import URIRef, Literal, Namespace, RDF, RDFS, OWL, XSD, Graph, BNode
 from converter.accident_columns import isValidVehicle
+from datetime import datetime
 
 geocoord = 'http://www.w3.org/2003/01/geo/wgs84_pos#'
 accidentVocab = 'http://github.com/kawai924/SementicNYWeatherAccident/accident#'
@@ -60,7 +61,8 @@ def convert_to_rdf(input_file, output_file):
         # setup and add crash date to graph as resource
         crash_date_raw = accident_data['CRASH DATE'].split('/')
         crash_date_formatted = crash_date_raw[2] + "-" + crash_date_raw[0] + "-" + crash_date_raw[1]
-        crash_date = Literal(crash_date_formatted, datatype=XSD['date'])
+        dt = datetime(int(crash_date_raw[2]), int(crash_date_raw[0]), int(crash_date_raw[1])).isoformat()
+        crash_date = Literal(dt, datatype=XSD['dateTime'])
         graph.add((accident, ACT['hasDate'], crash_date))
 
         borough_raw = str(accident_data['BOROUGH']).split(" ")
@@ -83,6 +85,7 @@ def convert_to_rdf(input_file, output_file):
             graph.add((accident, ACT['inZipCode'], zip))
             if (''.join(borough_data) != 'Nan'):
                 graph.add((borough, ACT['containsZipCode'], zip))
+                graph.add((zip, ACT['belongsToBorough'], borough))
 
         # setup and add geo coordinates to graph as literals
         lat = Literal(accident_data['LATITUDE'] if pd.isnull(accident_data['LATITUDE']) == False else 0, datatype=XSD['double'])
@@ -100,6 +103,7 @@ def convert_to_rdf(input_file, output_file):
             graph.add((location, RDFS.label, Literal(location_data)))
             if ''.join(borough_data) != 'Nan':
                 graph.add((borough, ACT['containsLocation'], location))
+                graph.add((location, ACT['inBorough'], borough))
             graph.add((accident, ACT['inLocation'], location))
 
         # setup and add street name to graph as Literal
@@ -178,8 +182,8 @@ def convert_to_rdf(input_file, output_file):
             rows += 1
 
         # only processing 50,000 rows so it can be loaded into protege within reasonable time
-        if(rows == 5):
-            break
+        # if(rows == 5):
+        #     break
 
     __save__(graph, output_file)
 
