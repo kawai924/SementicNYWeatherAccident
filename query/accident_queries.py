@@ -21,22 +21,21 @@ def start():
     accident_graph.parse(accident_rdf_location + 'NYstation.rdf', format='xml')
     accident_graph.parse(accident_rdf_location + 'NY_weather_type.rdf', format='xml')
 
-    print("\nExecuting query `How many accidents in Queens could have been caused by Thunder in 2020?`...")
+    print("\nExecuting query `How many accidents in Queens could have been caused by Distraction due to Thunder in 2020?`...")
     results = accident_graph.query("""
                PREFIX act: <http://github.com/kawai924/SementicNYWeatherAccident/accident#>
                PREFIX STA: <http://github.com/kawai924/SementicNYWeatherAccident/station#>
                PREFIX wea: <http://github.com/kawai924/SementicNYWeatherAccident/weather#>
                SELECT DISTINCT ?accident ?borough ?location ?zipcode ?date ?station ?weather ?station_type
                WHERE {
-                   {
-                       SELECT DISTINCT ?accident ?borough ?location ?zipcode ?date ?station ?weather ?station_type
-                       WHERE {
                        ?accident a act:VehicleAccident;
                                  rdfs:label ?id;
                                  act:hasDate ?date;
-                                 act:inLocation ?location.
-                                 
-                       ?location act:inBorough ?borough. 
+                                 act:inLocation ?location;
+                                 act:hasContributingFactor ?factor.
+                       
+                       FILTER(REGEX(?factor, "Distraction")).
+                       {?location act:inBorough ?borough} UNION {?accident act:hasBorough ?borough}. 
                        ?borough rdf:type act:Queens.
                        OPTIONAL {?accident act:inZipCode ?zipcode}
                        
@@ -45,10 +44,9 @@ def start():
                                      wea:onDate ?date;
                                      wea:hasWeatherType ?weather.
                        FILTER(?weather = "Thunder"^^xsd:string)
-                       }
-                   }
-
-               } GROUP BY ?accident
+               }
+               GROUP BY ?accident
+               ORDER BY MONTH(?date)
                 """, initNs={'act': accidentNamespace, 'STA': stationsNamespace, 'wea': weatherTypeNamespace})
 
     """ @todo: compress data extraction """
@@ -76,7 +74,7 @@ def start():
     # displaying the DataFrame
     # print(tabulate(df, headers='keys', tablefmt='psql', showindex=False))
     with open(output_location + 'accidents-queens-thunder.txt', 'w') as f:
-        f.write('How many accidents in Queens could have been caused by Thunder in 2020? ---- Answer: ' +
+        f.write('How many accidents in Queens could have been caused by Distraction due to Thunder in 2020? ---- Answer: ' +
                 str(len(results)) + '\n\n')
         f.write(tabulate(df, headers='keys', tablefmt='psql', showindex=False))
 
