@@ -1,3 +1,5 @@
+from datetime import datetime
+
 import pandas as pd
 from iribaker import to_iri
 from rdflib import URIRef, Literal, Namespace, RDF, RDFS, OWL, XSD, Graph, BNode
@@ -11,9 +13,11 @@ RESOURCES = Namespace(resource)
 
 graph = []
 
+
 def __load__(file_path):
     data = pd.read_csv(file_path, sep=",", quotechar='"', low_memory=False)
     return data
+
 
 def __setup_namespace__():
     RESOURCES = Namespace(resource)
@@ -37,7 +41,6 @@ def __save__(graph, file_path):
 
 
 def convert_to_rdf(input_file, output_file):
-
     rows = 0
     data = __load__(input_file)
     RES, WEA, STA = __setup_namespace__()
@@ -47,12 +50,12 @@ def convert_to_rdf(input_file, output_file):
     filter2020 = data
 
     for index, data in filter2020.iterrows():
-        
-        
-        station_id =  URIRef(to_iri(station + str(data['STATION_ID'])))
+        station_id = URIRef(to_iri(station + str(data['STATION_ID'])))
         date = URIRef(to_iri(resource + str(data['DATE'])))
         STATION_ID = Literal(data['STATION_ID'], datatype=XSD['string'])
-        DATE = Literal(str(data['DATE']), datatype=XSD['DATE'])
+        date_raw = str(data['DATE'])
+        dt = datetime(int(date_raw[0:4]), int(date_raw[4:6]), int(date_raw[6:8])).isoformat()
+        DATE = Literal(dt, datatype=XSD['dateTime'])
 
         instance = URIRef(to_iri(weatherVocab + ''.join(STATION_ID) + '/' + ''.join(str(data['DATE']))))
 
@@ -65,9 +68,8 @@ def convert_to_rdf(input_file, output_file):
 
         graph.add((instance, WEA['hasWeatherID'], Literal(data['WEATHER_ID'], datatype=XSD['string'])))
         graph.add((instance, WEA['hasWeatherType'], Literal(data['WEATHER_TYPE'], datatype=XSD['string'])))
-        graph.add((instance, WEA['onDate'], Literal(data['DATE'], datatype=XSD['DATE'])))
+        graph.add((instance, WEA['onDate'], Literal(dt, datatype=XSD['dateTime'])))
 
- 
     __save__(graph, output_file)
 #
 # input_file = '../data/csv/NY_weather_type_pivot.csv'
