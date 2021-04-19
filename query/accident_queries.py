@@ -3,11 +3,12 @@ from rdflib import Graph
 import pandas as pd
 import time
 
-accident_rdf_location = "./data/rdf/"
-output_location = "./query/output/"
+accident_rdf_location = "./../data/rdf/"
+output_location = "./../query/output/"
 accidentNamespace = 'http://github.com/kawai924/SementicNYWeatherAccident/accident#'
 stationsNamespace = 'http://github.com/kawai924/SementicNYWeatherAccident/station#'
 weatherTypeNamespace = 'http://github.com/kawai924/SementicNYWeatherAccident/weather#'
+
 
 """
 How-to query graph in rdflib using sparql: https://www.oreilly.com/library/view/programming-the-semantic/9780596802141/ch04.html
@@ -78,6 +79,11 @@ def start():
                 str(len(results)) + '\n\n')
         f.write(tabulate(df, headers='keys', tablefmt='psql', showindex=False))
 
+    print('exporting to html')
+    f=open(output_location + 'thunder_accident.html', 'w')
+    f.write(df.to_html())
+    f.close()
+
     print('Answer to the query: ' + str(len(results)))
     print("Execution took: %.2f seconds" % (time.time() - start_time))
 
@@ -94,3 +100,7 @@ def replace_prefix(data):
         return data.replace(weatherTypeNamespace, "wea:")
     else:
         return data
+
+
+
+start()

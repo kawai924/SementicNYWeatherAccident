@@ -5,6 +5,7 @@ g = rdflib.Graph()
 
 # ... add some triples to g somehow ...
 g.parse('../data/rdf/NYstation.rdf')
+
 # g.serialize(format='JSON')
 #
 # qres = g.query(
@@ -48,7 +49,7 @@ df = pd.DataFrame({"Name":name, "Station_id":station_id, "County":county, "Lat":
 
 
 # now create the html page and write the data...
-f=open('webpage.html','w')
+f=open('output/simple_station.html', 'w')
 f.write(df.to_html())
 f.close()
 
