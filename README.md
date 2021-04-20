@@ -1,20 +1,27 @@
-# Generating semantic data using NY weather and accident data
+# Generating and querying semantic data using NY weather and accident data
 
->CECS 571 - Fundamentals of Semantic Web Technologies\
->Team 3: Dennis Lo, Andreas Saplacan, Mandar Vijay Kulkarni, Vatsal Patel
+>CECS 571 - Fundamentals of Semantic Web Technologies
+>>**Project 2 - Generate semantic data**\
+>>Team 3: Dennis Lo, Andreas Saplacan, Mandar Vijay Kulkarni, Vatsal Patel\
+>>\
+>>**Project 3 - Querying semantic data**\
+>>Team 2: Dennis Lo, Andreas Saplacan, Upasana Garg, Aditi Tomar, Gayathri Venna
 
 This project converts 2 datasets referencing New York weather and crash accident reports from plain `.csv` to the semantic standard in `.rdf`. It gives the datasets a shared meaning and relationships of weather and accident concepts and enables systems to infer knowledge.
+The project also includes queries demonstrating the ability to answer complex questions using SPARQL as query language.
 
 ## Project structure
 
     .
-    ├── converter                       # Contains converter scripts for weather and accident
-    ├── data                            # Hosts input and output data
+    ├── converter                       # Contains converter scripts for weather and accident  (project 2)
+    ├── data                            # Hosts input and output data  (project 2)
     │   ├── csv                         # Input: datasets in .csv format
-    │   └── rdf                         # Output: populated ontologies in .rdf format
-    ├── ontology                        # Contains generated ontologies using Protege in .ttl format
+    │   └── rdf                         # Output: populated ontologies in .rdf format (in zip file)
+    ├── ontology                        # Contains generated ontologies using Protege in .ttl format  (project 2)
+    ├── query                           # Contains query scripts for executing SPARQL queries  (project 3)
+    │   └── output                      # Output: result of SPARQL queries in HTML format  (project 3)
     ├── venv                            # Dependencies needed to run the project
-    ├── entrypoint.py                   # Main entry point of the program
+    ├── entrypoint.py                   # Main entry point of the program to execute converter and queries
     ├── NY_weather_data_extraction.py   # Script to pull and generate weather data into data/csv
     └── README.md
     
@@ -27,6 +34,11 @@ This project converts 2 datasets referencing New York weather and crash accident
 
 3) **Populate ontology:** Add instances to the generated ontology using [Python](https://www.python.org/) and [RDFLib](https://github.com/RDFLib/rdflib).
 > [Documentation](https://rdflib.readthedocs.io/en/stable/intro_to_creating_rdf.html) on how to create graphs and triplets using RDFLib
+
+## How to query an ontology using SPARQL and RDFLib
+
+Use [RDFLib](https://github.com/RDFLib/rdflib) to query graph using [SPARQL](https://www.w3.org/TR/rdf-sparql-query/) syntax.
+> Follow [this](https://www.oreilly.com/library/view/programming-the-semantic/9780596802141/ch04.html) tutorial on how to create simple queries
 
 
 ## Setting up and running the project
@@ -76,7 +88,29 @@ python entrypoint.py
 deactivate
 ```
 
-> The generated RDF files can be found under data/rdf/*.rdf
+> The generated RDF files can be found under data/rdf/*.rdf\
+> The generated HTML files can be found under query/output/*.html
+
+## Queries and their developers
+
+Following are the queries that were tested on the generated ontologies for accidents and weather in NY city and their respective developers.
+
+Query  | Developer
+------------- | -------------
+What is the monthly summary of accidents including injuries and weather data? | Upasana Garg
+How many accidents in Queens could have been caused by Distraction due to Thunder in 2020? | Andreas Saplacan
+Which weather station is located in the county of Ontario? | Dennis Lo
+xxxxxxx | Aditi Tomar
+xxxxxxx | Gayathri Venna
+
+**Prefixes for namespaces:**
+
+Prefix | Namespace | Description 
+------------- | ------------- | -------------
+act | http://github.com/kawai924/SementicNYWeatherAccident/accident# | Accident data
+STA | http://github.com/kawai924/SementicNYWeatherAccident/station# | Weather station ID
+wea | http://github.com/kawai924/SementicNYWeatherAccident/weather# | Weather type by station and date
+wean | http://github.com/kawai924/SementicNYWeather/stationID# | Weather number by station and date
 
 ## Software dependencies:
 > All dependencies are included in `venv.zip`, which has to be unzipped before running the project
@@ -98,6 +132,6 @@ deactivate
 - https://www1.ncdc.noaa.gov/pub/data/cdo/documentation/gsom-gsoy_documentation.pdf - how to read weather data set
 - https://rdflib.readthedocs.io/en/stable/intro_to_creating_rdf.html - how to create a graph and use triples in RDFLib
 - http://mowl-power.cs.man.ac.uk/protegeowltutorial/resources/ProtegeOWLTutorialP4_v1_3.pd - how to create an ontology using Protege
-
+- https://www.oreilly.com/library/view/programming-the-semantic/9780596802141/ch04.html - how to query rdf using SPARQL and RDFLib
 
 
