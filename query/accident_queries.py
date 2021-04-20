@@ -1,27 +1,24 @@
 from tabulate import tabulate
-from rdflib import Graph
 import pandas as pd
 import time
+from query.knowledge_graph import Knowledge_Graph
 
-accident_rdf_location = "./data/rdf/"
 output_location = "./query/output/"
 accidentNamespace = 'http://github.com/kawai924/SementicNYWeatherAccident/accident#'
 stationsNamespace = 'http://github.com/kawai924/SementicNYWeatherAccident/station#'
 weatherTypeNamespace = 'http://github.com/kawai924/SementicNYWeatherAccident/weather#'
 
+
 """
-How-to query graph in rdflib using sparql: https://www.oreilly.com/library/view/programming-the-semantic/9780596802141/ch04.html
+Query: How many accidents in Queens could have been caused by Distraction due to Thunder in 2020?
+Developer: Andreas Saplacan
 """
 def start():
     start_time = time.time()  # time execution
 
-    accident_graph = Graph()
-    # add ontologies for accident, weather station and weather type
-    accident_graph.parse(accident_rdf_location + 'NY_accident.rdf', format='xml')
-    accident_graph.parse(accident_rdf_location + 'NYstation.rdf', format='xml')
-    accident_graph.parse(accident_rdf_location + 'NY_weather_type.rdf', format='xml')
+    accident_graph = Knowledge_Graph.get_graph_instance()
 
-    print("\nExecuting query `How many accidents in Queens could have been caused by Distraction due to Thunder in 2020?`...")
+    print("Executing query `How many accidents in Queens could have been caused by Distraction due to Thunder in 2020?`...")
     results = accident_graph.query("""
                PREFIX act: <http://github.com/kawai924/SementicNYWeatherAccident/accident#>
                PREFIX STA: <http://github.com/kawai924/SementicNYWeatherAccident/station#>
@@ -49,15 +46,7 @@ def start():
                ORDER BY MONTH(?date)
                 """, initNs={'act': accidentNamespace, 'STA': stationsNamespace, 'wea': weatherTypeNamespace})
 
-    """ @todo: compress data extraction """
-    Accident = []
-    Borough = []
-    Location = []
-    Zip = []
-    Date = []
-    Station_id = []
-    Weather = []
-    Station_type = []
+    Accident, Borough, Location, Zip, Date, Station_id, Weather, Station_type = [], [], [], [], [], [], [], []
     for triple in results:
         Accident.append(replace_prefix(triple[0]))
         Borough.append(replace_prefix(triple[1]))
@@ -77,6 +66,13 @@ def start():
         f.write('How many accidents in Queens could have been caused by Distraction due to Thunder in 2020? ---- Answer: ' +
                 str(len(results)) + '\n\n')
         f.write(tabulate(df, headers='keys', tablefmt='psql', showindex=False))
+
+    print('exporting to html')
+    f = open(output_location + 'accidents-queens-thunder.html', 'w')
+    f.write('How many accidents in Queens could have been caused by Distraction due to Thunder in 2020? ---- Answer: ' +
+            str(len(results)) + '\n\n')
+    f.write(df.to_html())
+    f.close()
 
     print('Answer to the query: ' + str(len(results)))
     print("Execution took: %.2f seconds" % (time.time() - start_time))

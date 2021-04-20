@@ -20,15 +20,15 @@ def __load__(file_path):
 
 def __setup_namespace__():
     RESOURCES = Namespace(resource)
-    WEA = Namespace(weatherVocab)
+    WEAN = Namespace(weatherVocab)
     STA = Namespace(station)
-    return RESOURCES, WEA, STA
+    return RESOURCES, WEAN, STA
 
 
 def __setup_graph__(res):
     graph = Graph()
     graph.bind('data', res)
-    graph.bind('wea', weatherVocab)
+    graph.bind('wean', weatherVocab)
     return graph
 
 

@@ -1,9 +1,10 @@
-# import NY_weather_data_extraction as weatherStation
 import converter.accident_converter as accident
 import converter.weather_converter as weather
 import converter.weather_type_converter as weather_type
 import converter.station_converter as station
-import query.accident_queries as accident_query
+import query.accident_queries as accident_thunder_query
+import query.monthly_summary_ as monthly_summary_query
+import query.simple_station_ as simple_station_query
 
 
 def create_rdf():
@@ -26,12 +27,21 @@ def create_rdf():
 
 
 def execute_queries():
-    print('Querying accident data...')
-    accident_query.start()
-    print('Done with querying accident data!\n')
+    print('Executing query #1...')
+    accident_thunder_query.start() # complex query
+    print('Done with query #1!\n\n')
+
+    print('Executing query #2...')
+    monthly_summary_query.start() # complex query
+    print('Done with query #2!\n\n')
+
+    print('Executing query #3...')
+    simple_station_query.start() # simple query
+    print('Done with query #3!\n')
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    # create_rdf()
-    execute_queries()
+    # comment out specific line if only project 2 or 3 should run
+    # create_rdf() # Project 2
+    execute_queries() # Project 3
