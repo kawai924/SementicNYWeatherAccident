@@ -13,6 +13,7 @@ voc_location = "./ontology/"
 RESOURCES = Namespace(resource)
 graph = []
 
+
 def __load__(file_path):
     data = pd.read_csv(file_path, sep=",", quotechar='"', low_memory=False)
     return data
@@ -52,17 +53,16 @@ def convert_to_rdf(input_file, output_file):
 
         # Collision_id is primary key
         stationId = URIRef(to_iri(station + str(weather_data['station_id'])))
-        
+
         Date = URIRef(to_iri(resource + str(weather_data['date'])))
-        
+
         # graph.add((stationId,WEA['isOn'],Date))
         # data property
         station_id = Literal(weather_data['station_id'], datatype=XSD['string'])
         date = Literal(str(weather_data['date']), datatype=XSD['date'])
-        
-        
+
         # borough_data = str(accident_data['BOROUGH']).capitalize()
-        instance = URIRef(to_iri(weatherVocab + ''.join(station_id) + '/' +''.join(str(weather_data['date']))))
+        instance = URIRef(to_iri(weatherVocab + ''.join(station_id) + '/' + ''.join(str(weather_data['date']))))
         graph.add((instance, RDF.type, instance))
         # graph.add((instance, STA['station_id'], stationId))
         graph.add((instance, WEA['stationID'], stationId))
@@ -84,10 +84,9 @@ def convert_to_rdf(input_file, output_file):
 
         if (pd.isnull(weather_data['WESF']) == False):
             graph.add((instance, WEA['hasWESF'], Literal(weather_data['WESF'], datatype=XSD['int'])))
-        
 
         # just for debugging purposes
-        if((index % 10000) == 0):
+        if ((index % 10000) == 0):
             print("done with " + str(rows) + "0,000 rows")
             rows += 1
 

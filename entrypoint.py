@@ -5,6 +5,9 @@ import converter.station_converter as station
 import query.accident_queries as accident_thunder_query
 import query.monthly_summary_ as monthly_summary_query
 import query.simple_station_ as simple_station_query
+import query.accident_queries as accident_query
+# import query.borough_accident as borough_accident_query
+# from query import accident_queries_optimize
 
 
 def create_rdf():
@@ -38,6 +41,14 @@ def execute_queries():
     print('Executing query #3...')
     simple_station_query.start() # simple query
     print('Done with query #3!\n')
+    print('Querying accident data...')
+    accident_query.start()
+    # print('Querying optimized accident data...')
+    # accident_queries_optimize.start()
+    # print('Querying borough data with View Obstruction...')
+    # borough_accident_query.start()
+    print('Done with querying accident data!\n')
+
 
 
 # Press the green button in the gutter to run the script.

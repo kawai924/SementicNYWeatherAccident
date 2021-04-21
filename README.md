@@ -100,8 +100,8 @@ Query  | Developer
 What is the monthly summary of accidents including injuries and weather data? | Upasana Garg
 How many accidents in Queens could have been caused by Distraction due to Thunder in 2020? | Andreas Saplacan
 Which weather station is located in the county of Ontario? | Dennis Lo
-xxxxxxx | Aditi Tomar
-xxxxxxx | Gayathri Venna
+Which borough in NY had the greatest number of accidents due to view obstruction in heavy fog? | Gayathri Venna /Aditi Tomar
+Optimised query to load the RDFs once, and ask for input in terminal | Aditi Tomar/Gayathri Venna
 
 **Prefixes for namespaces:**
 
