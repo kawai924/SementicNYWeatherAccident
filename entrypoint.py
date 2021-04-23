@@ -6,9 +6,7 @@ import query.accident_queries as accident_thunder_query
 import query.monthly_summary_ as monthly_summary_query
 import query.simple_station_ as simple_station_query
 import query.accident_queries as accident_query
-# import query.borough_accident as borough_accident_query
-# from query import accident_queries_optimize
-
+import query.borough_accident as borough_accident_query
 
 def create_rdf():
     print('Parsing weather station data...')
@@ -31,25 +29,26 @@ def create_rdf():
 
 def execute_queries():
     print('Executing query #1...')
-    accident_thunder_query.start() # complex query
+    accident_thunder_query.start()  # complex query
     print('Done with query #1!\n\n')
 
     print('Executing query #2...')
-    monthly_summary_query.start() # complex query
+    monthly_summary_query.start()  # complex query
     print('Done with query #2!\n\n')
 
     print('Executing query #3...')
-    simple_station_query.start() # simple query
-    print('Done with query #3!\n')
-    print('Querying accident data...')
-    accident_query.start()
-    # print('Querying optimized accident data...')
-    # accident_queries_optimize.start()
-    # print('Querying borough data with View Obstruction...')
-    # borough_accident_query.start()
-    print('Done with querying accident data!\n')
+    simple_station_query.start()  # simple query
+    print('Done with query #3!\n\n')
 
+    print('Executing query #4...')
+    accident_query.start()          # complex query
+    print('Done with query #4!\n\n')
 
+    print('Executing query #5...')
+    borough_accident_query.start()  # complex query
+    print('Done with query #5!\n\n')
+
+    print('Done with executing all the queries!\n')
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':

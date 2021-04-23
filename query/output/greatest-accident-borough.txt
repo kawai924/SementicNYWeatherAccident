@@ -1,0 +1,70 @@
+ Which borough in NY had the greatest number of accidents due to view obstruction in heavy fog? ---- Answer: act:Brooklyn
+
++-------------+------------------+--------------------+-----------+---------------------+-----------------+-----------+--------------------------+
+| Accident    | Borough          | Location           | Zipcode   | Date                | Station ID      | Weather   | Station Type             |
+|-------------+------------------+--------------------+-----------+---------------------+-----------------+-----------+--------------------------|
+| act:4268663 | act:Manhattan    | act:40.754,-73.972 | act:10017 | 2020-01-04T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200104 |
+| act:4268813 | act:Queens       | act:40.779,-73.901 | act:11105 | 2020-01-04T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200104 |
+| act:4268680 | act:Queens       | act:40.665,-73.746 |           | 2020-01-04T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200104 |
+| act:4268712 | act:Manhattan    | act:40.737,-73.983 | act:10010 | 2020-01-04T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200104 |
+| act:4269453 | act:Queens       | act:40.756,-73.858 | act:11368 | 2020-01-04T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200104 |
+| act:4281613 | act:Bronx        | act:40.893,-73.842 |           | 2020-01-18T00:00:00 | sta:USW00014732 | Heavy Fog | wea:USW00014732/20200118 |
+| act:4290178 | act:Brooklyn     | act:40.704,-73.936 | act:11206 | 2020-02-18T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200218 |
+| act:4290579 | act:Bronx        | act:40.832,-73.859 | act:10472 | 2020-02-18T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200218 |
+| act:4290669 | act:Queens       | act:40.688,-73.841 | act:11416 | 2020-02-18T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200218 |
+| act:4290243 | act:Brooklyn     | act:40.669,-73.943 | act:11213 | 2020-02-18T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200218 |
+| act:4287313 | act:Bronx        | act:40.856,-73.881 | act:10458 | 2020-02-11T00:00:00 | sta:USW00014732 | Heavy Fog | wea:USW00014732/20200211 |
+| act:4285248 | act:Brooklyn     | act:40.689,-73.955 |           | 2020-02-07T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200207 |
+| act:4290277 | act:Brooklyn     | act:40.722,-73.946 | act:11222 | 2020-02-18T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200218 |
+| act:4287029 | act:Bronx        | act:40.809,-73.880 |           | 2020-02-11T00:00:00 | sta:USW00014732 | Heavy Fog | wea:USW00014732/20200211 |
+| act:4287156 | act:Manhattan    | act:40.757,-73.980 | act:10036 | 2020-02-11T00:00:00 | sta:USW00014732 | Heavy Fog | wea:USW00014732/20200211 |
+| act:4285509 | act:Brooklyn     | act:40.617,-73.947 | act:11210 | 2020-02-07T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200207 |
+| act:4284687 | act:Bronx        | act:40.867,-73.891 | act:10458 | 2020-02-07T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200207 |
+| act:4300793 | act:Brooklyn     | act:40.698,-73.910 | act:11237 | 2020-03-13T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200313 |
+| act:4303155 | act:Brooklyn     | act:40.689,-73.942 | act:11221 | 2020-03-20T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200320 |
+| act:4300933 | act:Manhattan    | act:40.806,-73.954 |           | 2020-03-13T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200313 |
+| act:4304415 | act:Manhattan    | act:40.738,-73.974 |           | 2020-03-29T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200329 |
+| act:4303130 | act:Brooklyn     | act:40.672,-73.992 | act:11215 | 2020-03-20T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200320 |
+| act:4299663 | act:Brooklyn     | act:40.657,-74.005 |           | 2020-03-13T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200313 |
+| act:4315423 | act:Brooklyn     | act:40.647,-73.953 | act:11226 | 2020-05-23T00:00:00 | sta:USW00014732 | Heavy Fog | wea:USW00014732/20200523 |
+| act:4315454 | act:Manhattan    | act:40.731,-73.983 | act:10009 | 2020-05-22T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200522 |
+| act:4316293 | act:Queens       | act:40.756,-73.803 | act:11358 | 2020-05-26T00:00:00 | sta:USW00014732 | Heavy Fog | wea:USW00014732/20200526 |
+| act:4315529 | act:Brooklyn     | act:40.706,-73.926 |           | 2020-05-22T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200522 |
+| act:4317254 | act:Manhattan    | act:40.725,-73.977 | act:10009 | 2020-05-27T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200527 |
+| act:4316484 | act:Bronx        | act:40.831,-73.924 | act:10452 | 2020-05-28T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200528 |
+| act:4317514 | act:Manhattan    | act:40.753,-73.985 | act:10018 | 2020-05-29T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200529 |
+| act:4315645 | act:Bronx        | act:40.845,-73.898 | act:10457 | 2020-05-23T00:00:00 | sta:USW00014732 | Heavy Fog | wea:USW00014732/20200523 |
+| act:4316057 | act:Brooklyn     | act:40.701,-73.922 | act:11237 | 2020-05-22T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200522 |
+| act:4315741 | act:StatenIsland | act:40.575,-74.091 | act:10306 | 2020-05-26T00:00:00 | sta:USW00014732 | Heavy Fog | wea:USW00014732/20200526 |
+| act:4315237 | act:Queens       | act:40.664,-73.768 | act:11434 | 2020-05-23T00:00:00 | sta:USW00014732 | Heavy Fog | wea:USW00014732/20200523 |
+| act:4316374 | act:Queens       | act:40.704,-73.793 |           | 2020-05-25T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200525 |
+| act:4321404 | act:Manhattan    | act:40.735,-74.005 | act:10014 | 2020-06-19T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200619 |
+| act:4321213 | act:Brooklyn     | act:40.642,-74.021 | act:11220 | 2020-06-18T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200618 |
+| act:4323092 | act:Bronx        | act:40.866,-73.838 | act:10469 | 2020-06-19T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200619 |
+| act:4321368 | act:Bronx        | act:40.854,-73.900 | act:10457 | 2020-06-18T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200618 |
+| act:4321021 | act:Queens       | act:40.759,-73.918 |           | 2020-06-11T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200611 |
+| act:4321247 | act:Brooklyn     | act:40.615,-73.984 | act:11204 | 2020-06-18T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200618 |
+| act:4337282 | act:Bronx        | act:40.814,-73.913 | act:10455 | 2020-08-11T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200811 |
+| act:4337599 | act:Bronx        | act:40.843,-73.839 | act:10461 | 2020-08-11T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200811 |
+| act:4338693 | act:Brooklyn     | act:40.676,-73.939 |           | 2020-08-11T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200811 |
+| act:4351061 | act:Bronx        | act:40.846,-73.902 | act:10457 | 2020-08-11T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200811 |
+| act:4337478 | act:Queens       | act:40.592,-73.784 |           | 2020-08-11T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20200811 |
+| act:4360153 | act:Bronx        | act:40.820,-73.860 | act:10473 | 2020-10-21T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20201021 |
+| act:4359687 | act:Brooklyn     | act:40.583,-73.973 |           | 2020-10-21T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20201021 |
+| act:4361902 | act:Brooklyn     | act:40.719,-73.945 | act:11211 | 2020-10-27T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20201027 |
+| act:4360544 | act:Queens       | act:40.693,-73.735 | act:11411 | 2020-10-23T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20201023 |
+| act:4362052 | act:Manhattan    | act:40.738,-74.004 | act:10014 | 2020-10-23T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20201023 |
+| act:4360605 | act:Manhattan    | act:40.729,-74.004 |           | 2020-10-23T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20201023 |
+| act:4359562 | act:Manhattan    | act:40.864,-73.919 | act:10034 | 2020-10-20T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20201020 |
+| act:4362790 | act:Brooklyn     | act:40.690,-73.983 | act:11201 | 2020-10-20T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20201020 |
+| act:4371048 | act:Bronx        | act:40.871,-73.833 | act:10475 | 2020-10-23T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20201023 |
+| act:4361766 | act:Brooklyn     | act:40.684,-73.920 | act:11233 | 2020-10-26T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20201026 |
+| act:4361741 | act:Queens       | act:40.708,-73.761 |           | 2020-10-26T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20201026 |
+| act:4359729 | act:Queens       | act:40.760,-73.942 | act:11106 | 2020-10-20T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20201020 |
+| act:4360100 | act:Brooklyn     | act:40.657,-73.898 | act:11207 | 2020-10-21T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20201021 |
+| act:4361245 | act:Queens       | act:40.744,-73.834 |           | 2020-10-26T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20201026 |
+| act:4364779 | act:Manhattan    | act:40.845,-73.937 | act:10033 | 2020-11-05T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20201105 |
+| act:4365200 | act:Brooklyn     | act:40.653,-73.959 | act:11226 | 2020-11-05T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20201105 |
+| act:4366320 | act:Brooklyn     | act:40.695,-73.953 |           | 2020-11-05T00:00:00 | sta:USW00094789 | Heavy Fog | wea:USW00094789/20201105 |
+| act:4379567 | act:Bronx        | act:40.852,-73.890 |           | 2020-12-12T00:00:00 | sta:USW00014732 | Heavy Fog | wea:USW00014732/20201212 |
++-------------+------------------+--------------------+-----------+---------------------+-----------------+-----------+--------------------------+

@@ -4,8 +4,8 @@ from tabulate import tabulate
 from rdflib import Graph
 import pandas as pd
 import time
+from query.knowledge_graph import Knowledge_Graph
 
-accident_rdf_location = "./data/rdf/"
 output_location = "./query/output/"
 accidentNamespace = 'http://github.com/kawai924/SementicNYWeatherAccident/accident#'
 stationsNamespace = 'http://github.com/kawai924/SementicNYWeatherAccident/station#'
@@ -20,11 +20,7 @@ Developers : Gayathri Venna and Aditi Tomar
 def start():
     start_time = time.time()
 
-    accident_graph = Graph()
-    # add ontologies for accident, weather station and weather type
-    accident_graph.parse(accident_rdf_location + 'NY_accident.rdf', format='xml')
-    accident_graph.parse(accident_rdf_location + 'NYstation.rdf', format='xml')
-    accident_graph.parse(accident_rdf_location + 'NY_weather_type.rdf', format='xml')
+    accident_graph = Knowledge_Graph.get_graph_instance()
 
     print(
         "\nExecuting query ` Which borough in NY had the greatest number of accidents due to view obstruction in heavy fog?`...")
@@ -79,20 +75,26 @@ def start():
                                      'Station Type'])
     # displaying the DataFrame
     # print(tabulate(df, headers='keys', tablefmt='psql', showindex=False))
-    with open(output_location + 'borough-accident.txt', 'w') as f:
+
+    with open(output_location + 'greatest-accident-borough.txt', 'w') as f:
         f.write(
             ' Which borough in NY had the greatest number of accidents due to view obstruction in heavy fog? ---- Answer: ' +
             str(df['Borough'].value_counts().idxmax()) + '\n\n')
         f.write(tabulate(df, headers='keys', tablefmt='psql', showindex=False))
 
+    print('exporting to html')
+    f = open(output_location + 'greatest-accident-borough.html', 'w')
+    f.write(
+        ' Which borough in NY had the greatest number of accidents due to view obstruction in heavy fog? ---- Answer: ' +
+        str(df['Borough'].value_counts().idxmax()) + '\n\n')
+    f.write(df.to_html())
+    f.close()
 
     print('Answer to the query:' + str(df['Borough'].value_counts().idxmax()))
     print("Execution took: %.2f seconds" % (time.time() - start_time))
 
 
-
-
-
+""" Replaces namespace in resource with prefix for shorter display in output data """
 def replace_prefix(data):
     if not data:
         return
