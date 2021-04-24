@@ -99,9 +99,11 @@ Query  | Developer
 ------------- | -------------
 What is the monthly summary of accidents including injuries and weather data? | Upasana Garg
 How many accidents in Queens could have been caused by Distraction due to Thunder in 2020? | Andreas Saplacan
+What are the top 5 vehicle types that were involved in the most accidents in Manhattan due to ice? | Andreas Saplacan
 Which weather station is located in the county of Ontario? | Dennis Lo
 Which borough in NY had the greatest number of accidents due to view obstruction in heavy fog? | Gayathri Venna /Aditi Tomar
 Input query via terminal | Aditi Tomar/Gayathri Venna
+
 
 ## Running your own query
 

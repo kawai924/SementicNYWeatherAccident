@@ -5,8 +5,13 @@ import converter.station_converter as station
 import query.accident_queries as accident_thunder_query
 import query.monthly_summary_ as monthly_summary_query
 import query.simple_station_ as simple_station_query
+<<<<<<< HEAD
 import query.borough_accident as borough_accident_query
 import query.input_query as input_query
+=======
+import query.vehicle_type as vehicle_type_query
+
+>>>>>>> add top 5 vehicle types
 
 def create_rdf():
     print('Parsing weather station data...')
@@ -53,6 +58,10 @@ def execute_manual_query():
     print('This will allow you to input your own query in the terminal and execute it')
     input_query.start()
     print('Done with executing input query. You can find the output files under ./query/output/input_results.html')
+
+    print('Executing query #4...')
+    vehicle_type_query.start() # complex query
+    print('Done with query #4!\n\n')
 
 
 # Press the green button in the gutter to run the script.

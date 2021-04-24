@@ -4,7 +4,11 @@ from os import path
 
 rdf_location = "./data/rdf/"
 
-""" Create Singleton of knowledge graph that can be used across different queries"""
+"""
+Creates Singleton of knowledge graph that can be used across different queries
+
+How to create singletons using python: https://stackabuse.com/the-singleton-design-pattern-in-python/
+"""
 class Knowledge_Graph:
     __instance__ = None
 
@@ -15,8 +19,10 @@ class Knowledge_Graph:
 
             if not path.exists(rdf_location + 'NYstation.rdf'): # check if rdf files have already been extracted
                 print("Unzipping rdf files...")
+                # How to unzip files using python: https://stackoverflow.com/questions/3451111/unzipping-files-in-python
                 with zipfile.ZipFile(rdf_location + 'output_rdfs.zip', 'r') as zip_ref:
                     zip_ref.extractall(rdf_location)
+                print("Done unzipping rdf files")
 
             try:
                 # add ontologies for accident, weather station and weather type

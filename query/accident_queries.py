@@ -1,4 +1,3 @@
-from tabulate import tabulate
 import pandas as pd
 import time
 from query.knowledge_graph import Knowledge_Graph
@@ -23,7 +22,8 @@ def start():
                PREFIX act: <http://github.com/kawai924/SementicNYWeatherAccident/accident#>
                PREFIX STA: <http://github.com/kawai924/SementicNYWeatherAccident/station#>
                PREFIX wea: <http://github.com/kawai924/SementicNYWeatherAccident/weather#>
-               SELECT DISTINCT ?accident ?borough ?location ?zipcode ?date ?station ?weather ?station_type
+               SELECT DISTINCT ?accident ?borough ?location ?zipcode ?date ?station ?weather ?station_type 
+                               (COUNT(DISTINCT ?accident) AS ?numOfAcc) # count num of accidents
                WHERE {
                        ?accident a act:VehicleAccident;
                                  rdfs:label ?id;
@@ -42,8 +42,8 @@ def start():
                                      wea:hasWeatherType ?weather.
                        FILTER(?weather = "Thunder"^^xsd:string)
                }
-               GROUP BY ?accident
-               ORDER BY MONTH(?date)
+               GROUP BY ?accident # remove/add comment to display all found instances
+               ORDER BY MONTH(?date) # remove/add comment to display all found instances
                 """, initNs={'act': accidentNamespace, 'STA': stationsNamespace, 'wea': weatherTypeNamespace})
 
     Accident, Borough, Location, Zip, Date, Station_id, Weather, Station_type = [], [], [], [], [], [], [], []
@@ -62,16 +62,15 @@ def start():
                                      'Station Type'])
     # displaying the DataFrame
     # print(tabulate(df, headers='keys', tablefmt='psql', showindex=False))
-    with open(output_location + 'accidents-queens-thunder.txt', 'w') as f:
-        f.write('How many accidents in Queens could have been caused by Distraction due to Thunder in 2020? ---- Answer: ' +
-                str(len(results)) + '\n\n')
-        f.write(tabulate(df, headers='keys', tablefmt='psql', showindex=False))
 
     print('exporting to html')
     f = open(output_location + 'accidents-queens-thunder.html', 'w')
-    f.write('How many accidents in Queens could have been caused by Distraction due to Thunder in 2020? ---- Answer: ' +
-            str(len(results)) + '\n\n')
-    f.write(df.to_html())
+    f.write('<h3><b>'
+            'How many accidents in Queens could have been caused by Distraction due to Thunder in 2020?<br> '
+            'Answer: ' + str(len(results)) +
+            '</b></h3>')
+    f.write(get_text_prefix())
+    f.write(df.to_html(index=False))
     f.close()
 
     print('Answer to the query: ' + str(len(results)))
@@ -90,3 +89,10 @@ def replace_prefix(data):
         return data.replace(weatherTypeNamespace, "wea:")
     else:
         return data
+
+
+def get_text_prefix():
+    return "Namespaces and used prefixes:<br>" \
+            "act: http://github.com/kawai924/SementicNYWeatherAccident/accident#<br>" \
+            "sta: http://github.com/kawai924/SementicNYWeatherAccident/station#<br>" \
+            "wea: http://github.com/kawai924/SementicNYWeatherAccident/weather#<br><br>"
