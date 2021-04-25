@@ -6,6 +6,7 @@ import query.accident_queries as accident_thunder_query
 import query.monthly_summary_ as monthly_summary_query
 import query.simple_station_ as simple_station_query
 import query.borough_accident as borough_accident_query
+import query.vehicle_type as vehicle_type_query
 import query.input_query as input_query
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 import os
@@ -50,6 +51,10 @@ def execute_queries():
     borough_accident_query.start()  # complex query
     print('Done with query #4!\n\n')
 
+    print('Executing query #5...')
+    vehicle_type_query.start()  # complex query
+    print('Done with query #5!\n\n')
+
     print('Done with executing all the queries! You can find the output files under ./query/output/*.html \n')
 
 
@@ -78,4 +83,3 @@ if __name__ == '__main__':
     # start web server, until process terminated
     httpd = HTTPServer(('localhost', 8888), SimpleHTTPRequestHandler)
     httpd.serve_forever()
-
