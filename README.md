@@ -101,19 +101,20 @@ What is the monthly summary of accidents including injuries and weather data? | 
 How many accidents in Queens could have been caused by Distraction due to Thunder in 2020? | Andreas Saplacan
 Which weather station is located in the county of Ontario? | Dennis Lo
 Which borough in NY had the greatest number of accidents due to view obstruction in heavy fog? | Gayathri Venna /Aditi Tomar
-Input query to load the RDFs once, and ask for query input in terminal | Aditi Tomar/Gayathri Venna
+Input query via terminal | Aditi Tomar/Gayathri Venna
 
-## Explaination for input query
+## Running your own query
 
-Input query can be used to load the RDFs once and take the query as input on the terminal on Pycharm
+Input query can be used to manually query our graph by inputting a query via the terminal, similar to a search engine
 
 Steps to run input query are as follows: 
 
-1. Uncomment the query "accident_queries_optimize.py" in entrypoint.py and comment out other queries for now just to see how input query works
+1. Uncomment line 63 `execute_manual_query()` in entrypoint.py and comment line 61 and line 62 to run only the manual input query
 2. Run entrypoint.py
-3. Once the query loads the RDFs , just paste the query in the terminal , press enter one time and type ";;"
+3. Once the query loads all RDF and the console asks you for input, just type your query in the terminal. Once you are done, press enter one time and type ";;"
 4. Press enter and query will start running
-5. Keep observing the Pycharm output terminal for the results
+5. Keep observing the console output for runtime information
+6. The results can be found in `./query/output/input_results.html`
 
 
 **Prefixes for namespaces:**

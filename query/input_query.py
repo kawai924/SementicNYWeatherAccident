@@ -28,9 +28,7 @@ def start():
     accident_graph = Knowledge_Graph.get_graph_instance()
 
     while True:
-        # try:
-            execute(accident_graph)
-
+        execute(accident_graph)
 
 
 """ Replaces namespace in resource with prefix for shorter display in output data """
@@ -47,15 +45,11 @@ def replace_prefix(data):
         return data
 
 
-
 def executeQuery(query, accident_graph):
     start_time = time.time()
     results = accident_graph.query(query, initNs={'act': accidentNamespace, 'STA': stationsNamespace,
                                                   'wea': weatherTypeNamespace, 'wean': weatherNumberNamespace, 'geo': geoNamespace})
 
-
-
-    # displaying the DataFrame
     with open(output_location + 'query.txt', 'w') as f:
         f.write(query)
         f.close()
@@ -68,6 +62,7 @@ def executeQuery(query, accident_graph):
         e.close()
 
     print("Execution took: %.2f seconds" % (time.time() - start_time))
+    print("Done with this query!\n You can try another one if you like\n\n")
 
 
 def execute(accident_graph):
@@ -80,6 +75,5 @@ def execute(accident_graph):
         else:
             contents = contents + "\n" + line
     query = contents
-    print("\n Executing query " + query)
-
+    # print("\n Executing query " + query)  # for debugging purposes
     executeQuery(query, accident_graph)
