@@ -101,7 +101,20 @@ What is the monthly summary of accidents including injuries and weather data? | 
 How many accidents in Queens could have been caused by Distraction due to Thunder in 2020? | Andreas Saplacan
 Which weather station is located in the county of Ontario? | Dennis Lo
 Which borough in NY had the greatest number of accidents due to view obstruction in heavy fog? | Gayathri Venna /Aditi Tomar
-Optimised query to load the RDFs once, and ask for input in terminal | Aditi Tomar/Gayathri Venna
+Input query to load the RDFs once, and ask for query input in terminal | Aditi Tomar/Gayathri Venna
+
+## Explaination for input query
+
+Input query can be used to load the RDFs once and take the query as input on the terminal on Pycharm
+
+Steps to run input query are as follows: 
+
+1. Uncomment the query "accident_queries_optimize.py" in entrypoint.py and comment out other queries for now just to see how input query works
+2. Run entrypoint.py
+3. Once the query loads the RDFs , just paste the query in the terminal , press enter one time and type ";;"
+4. Press enter and query will start running
+5. Keep observing the Pycharm output terminal for the results
+
 
 **Prefixes for namespaces:**
 

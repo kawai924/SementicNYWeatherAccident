@@ -1,5 +1,3 @@
-
-
 from tabulate import tabulate
 from rdflib import Graph
 import pandas as pd
@@ -19,7 +17,6 @@ Developers : Gayathri Venna and Aditi Tomar
 
 def start():
     start_time = time.time()
-
     accident_graph = Knowledge_Graph.get_graph_instance()
 
     print(

@@ -7,6 +7,7 @@ import query.monthly_summary_ as monthly_summary_query
 import query.simple_station_ as simple_station_query
 import query.accident_queries as accident_query
 import query.borough_accident as borough_accident_query
+import query.input_query as input_query
 
 def create_rdf():
     print('Parsing weather station data...')
@@ -49,6 +50,12 @@ def execute_queries():
     print('Done with query #5!\n\n')
 
     print('Done with executing all the queries!\n')
+
+    print('Executing input query...')
+    input_query.start()
+    print('Done with executing input query...')
+
+
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
