@@ -18,7 +18,7 @@ The project also includes queries demonstrating the ability to answer complex qu
     │   ├── csv                         # Input: datasets in .csv format
     │   └── rdf                         # Output: populated ontologies in .rdf format (in zip file)
     ├── ontology                        # Contains generated ontologies using Protege in .ttl format  (project 2)
-    ├── query                           # Contains query scripts for executing SPARQL queries  (project 3)
+    ├── query                           # Contains query and graph scripts for executing SPARQL queries  (project 3)
     │   └── output                      # Output: result of SPARQL queries in HTML format  (project 3)
     ├── venv                            # Dependencies needed to run the project
     ├── entrypoint.py                   # Main entry point of the program to execute converter and queries

@@ -1,9 +1,7 @@
-from query.knowledge_graph import Knowledge_Graph
+from query.knowledge_graph import Knowledge_Graph, Namespaces
 import pandas as pd
 
 output_location = "./query/output/"
-accidentNamespace = 'http://github.com/kawai924/SementicNYWeatherAccident/accident#'
-weatherNumberNamespace = 'http://github.com/kawai924/SementicNYWeather/stationID#'
 
 """
 Query: What is the monthly summary of accidents including injuries and weather data?
@@ -52,7 +50,7 @@ def start():
             }
             GROUP BY (substr(xsd:string(?aDate),6,2) as ?mon)
             ORDER BY ?mon
-        """, initNs={'act': accidentNamespace, 'wean': weatherNumberNamespace})
+        """, initNs={'act': Namespaces.accident, 'wean': Namespaces.weatherNumber})
 
     month, pKill,pInjur,pedKill,pedInjur,tKill,tInjur,accCount,avgWind,avgTemp = [], [],[],[],[],[],[],[],[],[]
 

@@ -1,3 +1,4 @@
+from enum import Enum
 from rdflib import Graph
 import zipfile
 from os import path
@@ -44,3 +45,42 @@ class Knowledge_Graph:
             Knowledge_Graph()
         return Knowledge_Graph.__instance__
 
+
+"""
+Represents all namespaces used in the knowledge graph
+"""
+class Namespaces(Enum):
+    accident = 'http://github.com/kawai924/SementicNYWeatherAccident/accident#'
+    station = 'http://github.com/kawai924/SementicNYWeatherAccident/station#',
+    weatherType = 'http://github.com/kawai924/SementicNYWeatherAccident/weather#',
+    weatherNumber = 'http://github.com/kawai924/SementicNYWeather/stationID#',
+    geo = 'http://www.w3.org/2003/01/geo/wgs84_pos#'
+
+
+""" 
+Replaces namespace in resource with prefix for shorter display in output data 
+"""
+def replace_prefix(data):
+    if not data:
+        return
+    elif Namespaces.accident in data:
+        return data.replace(Namespaces.accident, "act:")
+    elif Namespaces.station in data:
+        return data.replace(Namespaces.station, "sta:")
+    elif Namespaces.weatherType in data:
+        return data.replace(Namespaces.weatherType, "wea:")
+    elif Namespaces.weatherNumber in data:
+        return data.replace(Namespaces.weatherNumber, "wean:")
+    else:
+        return data
+
+
+"""
+Returns all namespaces and prefixes used in the graph in html format
+"""
+def get_text_prefix():
+    return "Namespaces and used prefixes:<br>" \
+            "act: " + str(Namespaces.accident) + "<br>" \
+            "sta: " + str(Namespaces.station) + "<br>" \
+            "wea: " + str(Namespaces.weatherType) + "<br>" \
+            "wean: " + str(Namespaces.weatherNumber) + "<br><br>"

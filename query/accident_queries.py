@@ -1,11 +1,8 @@
 import pandas as pd
 import time
-from query.knowledge_graph import Knowledge_Graph
+from query.knowledge_graph import Knowledge_Graph, Namespaces, replace_prefix, get_text_prefix
 
 output_location = "./query/output/"
-accidentNamespace = 'http://github.com/kawai924/SementicNYWeatherAccident/accident#'
-stationsNamespace = 'http://github.com/kawai924/SementicNYWeatherAccident/station#'
-weatherTypeNamespace = 'http://github.com/kawai924/SementicNYWeatherAccident/weather#'
 
 
 """
@@ -44,7 +41,7 @@ def start():
                }
                GROUP BY ?accident # remove/add comment to display all found instances
                ORDER BY MONTH(?date) # remove/add comment to display all found instances
-                """, initNs={'act': accidentNamespace, 'STA': stationsNamespace, 'wea': weatherTypeNamespace})
+                """, initNs={'act': Namespaces.accident, 'STA': Namespaces.station, 'wea': Namespaces.weatherType})
 
     Accident, Borough, Location, Zip, Date, Station_id, Weather, Station_type = [], [], [], [], [], [], [], []
     for triple in results:
@@ -77,22 +74,3 @@ def start():
     print("Execution took: %.2f seconds" % (time.time() - start_time))
 
 
-""" Replaces namespace in resource with prefix for shorter display in output data """
-def replace_prefix(data):
-    if not data:
-        return
-    elif accidentNamespace in data:
-        return data.replace(accidentNamespace, "act:")
-    elif stationsNamespace in data:
-        return data.replace(stationsNamespace, "sta:")
-    elif weatherTypeNamespace in data:
-        return data.replace(weatherTypeNamespace, "wea:")
-    else:
-        return data
-
-
-def get_text_prefix():
-    return "Namespaces and used prefixes:<br>" \
-            "act: http://github.com/kawai924/SementicNYWeatherAccident/accident#<br>" \
-            "sta: http://github.com/kawai924/SementicNYWeatherAccident/station#<br>" \
-            "wea: http://github.com/kawai924/SementicNYWeatherAccident/weather#<br><br>"
