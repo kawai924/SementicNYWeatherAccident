@@ -1,13 +1,9 @@
 from tabulate import tabulate
-from rdflib import Graph
 import pandas as pd
 import time
-from query.knowledge_graph import Knowledge_Graph
+from query.knowledge_graph import Knowledge_Graph, Namespaces, replace_prefix
 
 output_location = "./query/output/"
-accidentNamespace = 'http://github.com/kawai924/SementicNYWeatherAccident/accident#'
-stationsNamespace = 'http://github.com/kawai924/SementicNYWeatherAccident/station#'
-weatherTypeNamespace = 'http://github.com/kawai924/SementicNYWeatherAccident/weather#'
 
 """
 Query : Which borough in NY had the greatest number of accidents due to view obstruction in heavy fog?
@@ -46,7 +42,7 @@ def start():
                }
                GROUP BY ?accident
                ORDER BY MONTH(?date)
-                """, initNs={'act': accidentNamespace, 'STA': stationsNamespace, 'wea': weatherTypeNamespace})
+                """, initNs={'act': Namespaces.accident, 'STA': Namespaces.station, 'wea': Namespaces.weatherType})
 
 
     Accident = []
@@ -90,16 +86,3 @@ def start():
     print('Answer to the query:' + str(df['Borough'].value_counts().idxmax()))
     print("Execution took: %.2f seconds" % (time.time() - start_time))
 
-
-""" Replaces namespace in resource with prefix for shorter display in output data """
-def replace_prefix(data):
-    if not data:
-        return
-    elif accidentNamespace in data:
-        return data.replace(accidentNamespace, "act:")
-    elif stationsNamespace in data:
-        return data.replace(stationsNamespace, "sta:")
-    elif weatherTypeNamespace in data:
-        return data.replace(weatherTypeNamespace, "wea:")
-    else:
-        return data

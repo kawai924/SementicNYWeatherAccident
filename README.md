@@ -91,6 +91,15 @@ deactivate
 > The generated RDF files can be found under data/rdf/\*.rdf\
 > The generated HTML files can be found under query/output/\*.html
 
+### Run different parts of the project
+Depending on which part of the project you want to run, comment the specific line in `entrypoint.py`
+
+<img src="https://cdn.discordapp.com/attachments/813896780126093393/835952903428374599/unknown.png" width="800">
+
+Leaving only line 66: Will only run project 2 - generating RDF from CSV\
+Leaving only line 67: Will only run project 3 - run all pre-defined queries\
+Leaving only line 68: Will only run project 3 - run manual query
+
 ## Queries and their developers
 
 Following are the queries that were tested on the generated ontologies for accidents and weather in NY city and their respective developers.
@@ -111,7 +120,7 @@ Input query can be used to manually query our graph by inputting a query via the
 
 Steps to run input query are as follows: 
 
-1. Uncomment line 63 `execute_manual_query()` in entrypoint.py and comment line 61 and line 62 to run only the manual input query
+1. Uncomment line 68 `execute_manual_query()` in entrypoint.py and comment line 67 and line 66 to run only the manual input query
 2. Run entrypoint.py
 3. Once the query loads all RDF and the console asks you for input, just type your query in the terminal. Once you are done, press enter one time and type ";;"
 4. Press enter and query will start running

@@ -1,5 +1,5 @@
 from enum import Enum
-from rdflib import Graph
+from rdflib import Graph, RDF
 import zipfile
 from os import path
 
@@ -19,11 +19,11 @@ class Knowledge_Graph:
             print("Loading rdfs into knowledge graph...")
 
             if not path.exists(rdf_location + 'NYstation.rdf'): # check if rdf files have already been extracted
-                print("Unzipping rdf files...")
+                print("\tUnzipping rdf files...")
                 # How to unzip files using python: https://stackoverflow.com/questions/3451111/unzipping-files-in-python
                 with zipfile.ZipFile(rdf_location + 'output_rdfs.zip', 'r') as zip_ref:
                     zip_ref.extractall(rdf_location)
-                print("Done unzipping rdf files")
+                print("\tDone unzipping rdf files")
 
             try:
                 # add ontologies for accident, weather station and weather type
@@ -50,6 +50,9 @@ class Knowledge_Graph:
 Represents all namespaces used in the knowledge graph
 """
 class Namespaces(Enum):
+    def __str__(self):
+        return '%s' % self.value
+
     accident = 'http://github.com/kawai924/SementicNYWeatherAccident/accident#'
     station = 'http://github.com/kawai924/SementicNYWeatherAccident/station#',
     weatherType = 'http://github.com/kawai924/SementicNYWeatherAccident/weather#',
@@ -63,14 +66,14 @@ Replaces namespace in resource with prefix for shorter display in output data
 def replace_prefix(data):
     if not data:
         return
-    elif Namespaces.accident in data:
-        return data.replace(Namespaces.accident, "act:")
-    elif Namespaces.station in data:
-        return data.replace(Namespaces.station, "sta:")
-    elif Namespaces.weatherType in data:
-        return data.replace(Namespaces.weatherType, "wea:")
-    elif Namespaces.weatherNumber in data:
-        return data.replace(Namespaces.weatherNumber, "wean:")
+    elif str(Namespaces.accident) in data:
+        return data.replace(str(Namespaces.accident), "act:")
+    elif str(Namespaces.station) in data:
+        return data.replace(str(Namespaces.station), "sta:")
+    elif str(Namespaces.weatherType) in data:
+        return data.replace(str(Namespaces.weatherType), "wea:")
+    elif str(Namespaces.weatherNumber) in data:
+        return data.replace(str(Namespaces.weatherNumber), "wean:")
     else:
         return data
 
