@@ -38,6 +38,7 @@ def start():
                                      wea:hasWeatherType ?weather.
                        FILTER(?weather = "Heavy Fog"^^xsd:string)
                }
+               GROUP BY ?accident
                ORDER BY MONTH(?date)
                 """, initNs={'act': Namespaces.accident, 'STA': Namespaces.station, 'wea': Namespaces.weatherType})
 
@@ -63,14 +64,6 @@ def start():
     list = zip(Accident, Borough, Location, Zip, Date, Station_id, Weather, Station_type)
     df = pd.DataFrame(list, columns=['Accident', 'Borough', 'Location', 'Zipcode', 'Date', 'Station ID', 'Weather',
                                      'Station Type'])
-    # displaying the DataFrame
-    # print(tabulate(df, headers='keys', tablefmt='psql', showindex=False))
-
-    # with open(output_location + 'greatest-accident-borough.txt', 'w') as f:
-    #     f.write(
-    #         ' Which borough in NY had the greatest number of accidents due to view obstruction in heavy fog? ---- Answer: ' +
-    #         str(df['Borough'].value_counts().idxmax()) + '\n\n')
-    #     f.write(tabulate(df, headers='keys', tablefmt='psql', showindex=False))
 
     print('exporting to html')
     f = open(output_location + 'heavy_fog_accident.html', 'w')
@@ -78,6 +71,5 @@ def start():
     f.write(df.to_html())
     f.close()
 
-    # print('Answer to the query:' + str(df['Borough'].value_counts().idxmax()))
     print("Execution took: %.2f seconds" % (time.time() - start_time))
 

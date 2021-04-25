@@ -27,6 +27,7 @@ def create_rdf():
     print('Converting weather number csv into rdf...')
     weather.convert_to_rdf('data/csv/NY_weather_number_pivot.csv', 'data/rdf/NY_weather_number.rdf')
     print('Done with weather number data!\n')
+
     print('Converting weather type csv into rdf...')
     weather_type.convert_to_rdf('data/csv/NY_weather_type_pivot.csv', 'data/rdf/NY_weather_type.rdf')
     print('Done with weather type data!\n')
@@ -35,25 +36,25 @@ def create_rdf():
 def execute_queries():
     print('This will run example simple and complex queries automatically')
 
-    print('Executing query #1...')
-    accident_thunder_query.start()  # complex query
-    print('Done with query #1!\n\n')
-
-    print('Executing query #2...')
-    monthly_summary_query.start()  # complex query
-    print('Done with query #2!\n\n')
-
-    print('Executing query #3...')
-    simple_station_query.start()  # simple query
-    print('Done with query #3!\n\n')
+    # print('Executing query #1...')
+    # accident_thunder_query.start()  # complex query
+    # print('Done with query #1!\n\n')
+    #
+    # print('Executing query #2...')
+    # monthly_summary_query.start()  # complex query
+    # print('Done with query #2!\n\n')
+    #
+    # print('Executing query #3...')
+    # simple_station_query.start()  # simple query
+    # print('Done with query #3!\n\n')
 
     print('Executing query #4...')
     borough_accident_query.start()  # complex query
     print('Done with query #4!\n\n')
-
-    print('Executing query #5...')
-    vehicle_type_query.start()  # complex query
-    print('Done with query #5!\n\n')
+    #
+    # print('Executing query #5...')
+    # vehicle_type_query.start()  # complex query
+    # print('Done with query #5!\n\n')
 
     print('Done with executing all the queries! You can find the output files under ./query/output/*.html \n')
 
@@ -67,9 +68,9 @@ def execute_manual_query():
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     # comment out specific line if only project 2 or 3 should run
-    # # create_rdf()  # Project 2
+    # create_rdf()  # Project 2
     execute_queries()  # Project 3 for all automated queries
-    # # execute_manual_query()  # Project 3 for executing manual queries aka search engine
+    # execute_manual_query()  # Project 3 for executing manual queries aka search engine
 
     ########################################################
     # web server part
