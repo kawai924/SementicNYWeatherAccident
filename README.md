@@ -27,7 +27,7 @@ The project also includes queries demonstrating the ability to answer complex qu
     
 ## How to convert `.csv` to meaningful `.rdf`
 
-1) **Gather datasets:** Use API's to pull the dataset from a given web service or search and dowload a dataset from https://www.data.gov/.
+1) **Gather datasets:** Use API's to pull the dataset from a given web service or search and download a dataset from https://www.data.gov/.
 
 2) **Design ontology:** Use [Protege](https://protege.stanford.edu/) to construct domain models and knowledge based concepts.
 > Follow [this](http://mowl-power.cs.man.ac.uk/protegeowltutorial/resources/ProtegeOWLTutorialP4_v1_3.pdf) tutorial on how to use Protege for ontology design
@@ -42,7 +42,7 @@ Use [RDFLib](https://github.com/RDFLib/rdflib) to query graph using [SPARQL](htt
 
 
 ## Setting up and running the project
-> **Disclaimer**: This project was developed and tested using MacOS.\
+> **Disclaimer**: This project was developed and tested using MacOS.
 
 > Python has to be installed on the machine (comes by default with XCode on MacOS)\
 > The project comes with all dependencies needed  in the `venv.zip` 
@@ -88,8 +88,8 @@ python entrypoint.py
 deactivate
 ```
 
-> The generated RDF files can be found under data/rdf/*.rdf\
-> The generated HTML files can be found under query/output/*.html
+> The generated RDF files can be found under data/rdf/\*.rdf\
+> The generated HTML files can be found under query/output/\*.html
 
 ## Queries and their developers
 

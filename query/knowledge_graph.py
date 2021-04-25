@@ -34,7 +34,7 @@ class Knowledge_Graph:
                 print("Done loading data into knowledge graph")
 
             except FileNotFoundError:
-                print("Could not load data into graph. Did you unzip output_rdf.zip?")
+                print("Could not load data into graph. Do the names of the rdf files match the unzipped filenames?")
 
         else:
             raise Exception("You cannot create a class of Knowledge_Graph")
