@@ -36,25 +36,25 @@ def create_rdf():
 def execute_queries():
     print('This will run example simple and complex queries automatically')
 
-    # print('Executing query #1...')
-    # accident_thunder_query.start()  # complex query
-    # print('Done with query #1!\n\n')
-    #
-    # print('Executing query #2...')
-    # monthly_summary_query.start()  # complex query
-    # print('Done with query #2!\n\n')
-    #
-    # print('Executing query #3...')
-    # simple_station_query.start()  # simple query
-    # print('Done with query #3!\n\n')
-
+    print('Executing query #1...')
+    accident_thunder_query.start()  # complex query
+    print('Done with query #1!\n\n')
+    
+    print('Executing query #2...')
+    monthly_summary_query.start()  # complex query
+    print('Done with query #2!\n\n')
+    
+    print('Executing query #3...')
+    simple_station_query.start()  # simple query
+    print('Done with query #3!\n\n')
+    
     print('Executing query #4...')
     borough_accident_query.start()  # complex query
     print('Done with query #4!\n\n')
-    #
-    # print('Executing query #5...')
-    # vehicle_type_query.start()  # complex query
-    # print('Done with query #5!\n\n')
+    
+    print('Executing query #5...')
+    vehicle_type_query.start()  # complex query
+    print('Done with query #5!\n\n')
 
     print('Done with executing all the queries! You can find the output files under ./query/output/*.html \n')
 
