@@ -18,7 +18,7 @@ The project also includes queries demonstrating the ability to answer complex qu
     │   ├── csv                         # Input: datasets in .csv format
     │   └── rdf                         # Output: populated ontologies in .rdf format (in zip file)
     ├── ontology                        # Contains generated ontologies using Protege in .ttl format  (project 2)
-    ├── query                           # Contains query scripts for executing SPARQL queries  (project 3)
+    ├── query                           # Contains query and graph scripts for executing SPARQL queries  (project 3)
     │   └── output                      # Output: result of SPARQL queries in HTML format  (project 3)
     ├── venv                            # Dependencies needed to run the project
     ├── entrypoint.py                   # Main entry point of the program to execute converter and queries
@@ -27,7 +27,7 @@ The project also includes queries demonstrating the ability to answer complex qu
     
 ## How to convert `.csv` to meaningful `.rdf`
 
-1) **Gather datasets:** Use API's to pull the dataset from a given web service or search and dowload a dataset from https://www.data.gov/.
+1) **Gather datasets:** Use API's to pull the dataset from a given web service or search and download a dataset from https://www.data.gov/.
 
 2) **Design ontology:** Use [Protege](https://protege.stanford.edu/) to construct domain models and knowledge based concepts.
 > Follow [this](http://mowl-power.cs.man.ac.uk/protegeowltutorial/resources/ProtegeOWLTutorialP4_v1_3.pdf) tutorial on how to use Protege for ontology design
@@ -42,7 +42,7 @@ Use [RDFLib](https://github.com/RDFLib/rdflib) to query graph using [SPARQL](htt
 
 
 ## Setting up and running the project
-> **Disclaimer**: This project was developed and tested using MacOS.\
+> **Disclaimer**: This project was developed and tested using MacOS.
 
 > Python has to be installed on the machine (comes by default with XCode on MacOS)\
 > The project comes with all dependencies needed  in the `venv.zip` 
@@ -88,8 +88,17 @@ python entrypoint.py
 deactivate
 ```
 
-> The generated RDF files can be found under data/rdf/*.rdf\
-> The generated HTML files can be found under query/output/*.html
+> The generated RDF files can be found under data/rdf/\*.rdf\
+> The generated HTML files can be found under query/output/\*.html
+
+### Run different parts of the project
+Depending on which part of the project you want to run, comment the specific line in `entrypoint.py`
+
+<img src="https://cdn.discordapp.com/attachments/813896780126093393/835952903428374599/unknown.png" width="800">
+
+Leaving only line 66: Will only run project 2 - generating RDF from CSV\
+Leaving only line 67: Will only run project 3 - run all pre-defined queries\
+Leaving only line 68: Will only run project 3 - run manual query
 
 ## Queries and their developers
 
@@ -99,9 +108,11 @@ Query  | Developer
 ------------- | -------------
 What is the monthly summary of accidents including injuries and weather data? | Upasana Garg
 How many accidents in Queens could have been caused by Distraction due to Thunder in 2020? | Andreas Saplacan
+What are the top 5 vehicle types that were involved in the most accidents in Manhattan due to ice? | Andreas Saplacan
 Which weather station is located in the county of Ontario? | Dennis Lo
 Which accident happened due to view obstruction in heavy fog? | Gayathri Venna /Aditi Tomar
 Input query via terminal | Aditi Tomar/Gayathri Venna
+
 
 ## Running your own query
 
@@ -109,7 +120,7 @@ Input query can be used to manually query our graph by inputting a query via the
 
 Steps to run input query are as follows: 
 
-1. Uncomment line 63 `execute_manual_query()` in entrypoint.py and comment line 61 and line 62 to run only the manual input query
+1. Uncomment line 68 `execute_manual_query()` in entrypoint.py and comment line 67 and line 66 to run only the manual input query
 2. Run entrypoint.py
 3. Once the query loads all RDF and the console asks you for input, just type your query in the terminal. Once you are done, press enter one time and type ";;"
 4. Press enter and query will start running
