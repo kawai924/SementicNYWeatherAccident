@@ -6,8 +6,12 @@ import query.accident_queries as accident_thunder_query
 import query.monthly_summary_ as monthly_summary_query
 import query.simple_station_ as simple_station_query
 import query.borough_accident as borough_accident_query
-import query.input_query as input_query
 import query.vehicle_type as vehicle_type_query
+import query.input_query as input_query
+from http.server import HTTPServer, SimpleHTTPRequestHandler
+import os
+import webbrowser
+
 
 def create_rdf():
     print('Parsing weather station data...')
@@ -23,6 +27,7 @@ def create_rdf():
     print('Converting weather number csv into rdf...')
     weather.convert_to_rdf('data/csv/NY_weather_number_pivot.csv', 'data/rdf/NY_weather_number.rdf')
     print('Done with weather number data!\n')
+
     print('Converting weather type csv into rdf...')
     weather_type.convert_to_rdf('data/csv/NY_weather_type_pivot.csv', 'data/rdf/NY_weather_type.rdf')
     print('Done with weather type data!\n')
@@ -34,19 +39,19 @@ def execute_queries():
     print('Executing query #1...')
     accident_thunder_query.start()  # complex query
     print('Done with query #1!\n\n')
-
+    
     print('Executing query #2...')
     monthly_summary_query.start()  # complex query
     print('Done with query #2!\n\n')
-
+    
     print('Executing query #3...')
     simple_station_query.start()  # simple query
     print('Done with query #3!\n\n')
-
+    
     print('Executing query #4...')
     borough_accident_query.start()  # complex query
     print('Done with query #4!\n\n')
-
+    
     print('Executing query #5...')
     vehicle_type_query.start()  # complex query
     print('Done with query #5!\n\n')
@@ -66,3 +71,16 @@ if __name__ == '__main__':
     # create_rdf()  # Project 2
     execute_queries()  # Project 3 for all automated queries
     # execute_manual_query()  # Project 3 for executing manual queries aka search engine
+
+    ########################################################
+    # web server part
+    ########################################################
+    # cd to the output folder
+    os.chdir('./query/output')
+
+    # call browser
+    webbrowser.open('localhost:8888')
+
+    # start web server, until process terminated
+    httpd = HTTPServer(('localhost', 8888), SimpleHTTPRequestHandler)
+    httpd.serve_forever()

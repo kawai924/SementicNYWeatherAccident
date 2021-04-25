@@ -94,11 +94,11 @@ deactivate
 ### Run different parts of the project
 Depending on which part of the project you want to run, comment the specific line in `entrypoint.py`
 
-<img src="https://cdn.discordapp.com/attachments/813896780126093393/835952903428374599/unknown.png" width="800">
+<img src="https://cdn.discordapp.com/attachments/813896780126093393/835991893723840563/unknown.png" width="800">
 
-Leaving only line 66: Will only run project 2 - generating RDF from CSV\
-Leaving only line 67: Will only run project 3 - run all pre-defined queries\
-Leaving only line 68: Will only run project 3 - run manual query
+Leaving only line 71: Will only run project 2 - generating RDF from CSV\
+Leaving only line 72: Will only run project 3 - run all pre-defined queries\
+Leaving only line 73: Will only run project 3 - run manual query
 
 ## Queries and their developers
 
@@ -110,7 +110,7 @@ What is the monthly summary of accidents including injuries and weather data? | 
 How many accidents in Queens could have been caused by Distraction due to Thunder in 2020? | Andreas Saplacan
 What are the top 5 vehicle types that were involved in the most accidents in Manhattan due to ice? | Andreas Saplacan
 Which weather station is located in the county of Ontario? | Dennis Lo
-Which borough in NY had the greatest number of accidents due to view obstruction in heavy fog? | Gayathri Venna /Aditi Tomar
+Which accident happened due to view obstruction in heavy fog? | Gayathri Venna /Aditi Tomar
 Input query via terminal | Aditi Tomar/Gayathri Venna
 
 
@@ -120,7 +120,7 @@ Input query can be used to manually query our graph by inputting a query via the
 
 Steps to run input query are as follows: 
 
-1. Uncomment line 68 `execute_manual_query()` in entrypoint.py and comment line 67 and line 66 to run only the manual input query
+1. Uncomment line 73 `execute_manual_query()` in entrypoint.py and comment line 71 and line 72 to run only the manual input query
 2. Run entrypoint.py
 3. Once the query loads all RDF and the console asks you for input, just type your query in the terminal. Once you are done, press enter one time and type ";;"
 4. Press enter and query will start running
@@ -137,6 +137,11 @@ STA | http://github.com/kawai924/SementicNYWeatherAccident/station# | Weather st
 wea | http://github.com/kawai924/SementicNYWeatherAccident/weather# | Weather type by station and date
 wean | http://github.com/kawai924/SementicNYWeather/stationID# | Weather number by station and date
 
+**Web server hosting:**\
+After execution from entrypoint.py, it will spin up a browser to serve the output files that sitting in `./query/output`, at `localhost:8888`.
+Hosted by httpd package in python.
+
+
 ## Software dependencies:
 > All dependencies are included in `venv.zip`, which has to be unzipped before running the project
 
@@ -144,7 +149,6 @@ wean | http://github.com/kawai924/SementicNYWeather/stationID# | Weather number 
 [Pandas](https://pandas.pydata.org/) - Tool for efficient data analysis and manipulation\
 [RDFLib](https://github.com/RDFLib/rdflib) - API for creating and manipulating with RDF \
 [Iribaker](https://pypi.org/project/iribaker/) - API for creating URI's easily
-
 
 ## Data Source:
 > All datasets were found via https://www.data.gov

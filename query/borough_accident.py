@@ -6,7 +6,7 @@ from query.knowledge_graph import Knowledge_Graph, Namespaces, replace_prefix
 output_location = "./query/output/"
 
 """
-Query : Which borough in NY had the greatest number of accidents due to view obstruction in heavy fog?
+Query : Which accident happened due to view obstruction in heavy fog?
 Developers : Gayathri Venna and Aditi Tomar
 """
 
@@ -16,7 +16,7 @@ def start():
     accident_graph = Knowledge_Graph.get_graph_instance()
 
     print(
-        "\nExecuting query ` Which borough in NY had the greatest number of accidents due to view obstruction in heavy fog?`...")
+        "\nExecuting query `Which accident happened due to view obstruction in heavy fog?`...")
     results = accident_graph.query("""
                PREFIX act: <http://github.com/kawai924/SementicNYWeatherAccident/accident#>
                PREFIX STA: <http://github.com/kawai924/SementicNYWeatherAccident/station#>
@@ -28,12 +28,10 @@ def start():
                                  act:hasDate ?date;
                                  act:inLocation ?location;
                                  act:hasContributingFactor ?factor.
-
                        FILTER(REGEX(?factor, "View Obstructed")).
                        {?location act:inBorough ?borough} UNION {?accident act:hasBorough ?borough}. 
                         
                        OPTIONAL {?accident act:inZipCode ?zipcode}
-
                        ?station STA:county "QUEENS"^^xsd:string.
                        ?station_type STA:station_id ?station;
                                      wea:onDate ?date;
@@ -66,23 +64,12 @@ def start():
     list = zip(Accident, Borough, Location, Zip, Date, Station_id, Weather, Station_type)
     df = pd.DataFrame(list, columns=['Accident', 'Borough', 'Location', 'Zipcode', 'Date', 'Station ID', 'Weather',
                                      'Station Type'])
-    # displaying the DataFrame
-    # print(tabulate(df, headers='keys', tablefmt='psql', showindex=False))
-
-    with open(output_location + 'greatest-accident-borough.txt', 'w') as f:
-        f.write(
-            ' Which borough in NY had the greatest number of accidents due to view obstruction in heavy fog? ---- Answer: ' +
-            str(df['Borough'].value_counts().idxmax()) + '\n\n')
-        f.write(tabulate(df, headers='keys', tablefmt='psql', showindex=False))
 
     print('exporting to html')
-    f = open(output_location + 'greatest-accident-borough.html', 'w')
-    f.write(
-        ' Which borough in NY had the greatest number of accidents due to view obstruction in heavy fog? ---- Answer: ' +
-        str(df['Borough'].value_counts().idxmax()) + '\n\n')
+    f = open(output_location + 'heavy_fog_accident.html', 'w')
+    f.write('Which accident happened due to view obstruction in heavy fog? ' )
     f.write(df.to_html())
     f.close()
 
-    print('Answer to the query:' + str(df['Borough'].value_counts().idxmax()))
     print("Execution took: %.2f seconds" % (time.time() - start_time))
 
