@@ -10,19 +10,6 @@ Developer: Dennis Lo
 def start():
     g = Knowledge_Graph.get_graph_instance()
 
-    # g.serialize(format='JSON')
-    #
-    # qres = g.query(
-    #     """
-    #     SELECT ?a ?station_id ?county ?lat ?long
-    #     where {
-    #         ?a STA:county ?county.
-    #         ?a STA:station_id ?station_id.
-    #         ?a geo:lat ?lat.
-    #         ?a geo:long ?long.
-    #         filter (?county = 'ONTARIO')
-    #     }
-    #     """)
 
     qres = g.query(
         """
@@ -56,6 +43,3 @@ def start():
     f=open(output_location + 'simple_station.html', 'w')
     f.write(df.to_html())
     f.close()
-
-    # call  python3 -m http.server 8000
-    # to host the folder and open result.html

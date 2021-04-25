@@ -62,10 +62,10 @@ def start():
                                      'Station Type'])
     # displaying the DataFrame
     # print(tabulate(df, headers='keys', tablefmt='psql', showindex=False))
-    with open(output_location + 'accidents-queens-thunder.txt', 'w') as f:
-        f.write('How many accidents in Queens could have been caused by Distraction due to Thunder in 2020? ---- Answer: ' +
-                str(len(results)) + '\n\n')
-        f.write(tabulate(df, headers='keys', tablefmt='psql', showindex=False))
+    # with open(output_location + 'accidents-queens-thunder.txt', 'w') as f:
+    #     f.write('How many accidents in Queens could have been caused by Distraction due to Thunder in 2020? ---- Answer: ' +
+    #             str(len(results)) + '\n\n')
+    #     f.write(tabulate(df, headers='keys', tablefmt='psql', showindex=False))
 
     print('exporting to html')
     f = open(output_location + 'accidents-queens-thunder.html', 'w')

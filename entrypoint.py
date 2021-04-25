@@ -7,6 +7,10 @@ import query.monthly_summary_ as monthly_summary_query
 import query.simple_station_ as simple_station_query
 import query.borough_accident as borough_accident_query
 import query.input_query as input_query
+from http.server import HTTPServer, SimpleHTTPRequestHandler
+import os
+import webbrowser
+
 
 def create_rdf():
     print('Parsing weather station data...')
@@ -58,6 +62,20 @@ def execute_manual_query():
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     # comment out specific line if only project 2 or 3 should run
-    # create_rdf()  # Project 2
+    # # create_rdf()  # Project 2
     execute_queries()  # Project 3 for all automated queries
-    # execute_manual_query()  # Project 3 for executing manual queries aka search engine
+    # # execute_manual_query()  # Project 3 for executing manual queries aka search engine
+
+    ########################################################
+    # web server part
+    ########################################################
+    # cd to the output folder
+    os.chdir('./query/output')
+
+    # call browser
+    webbrowser.open('localhost:8888')
+
+    # start web server, until process terminated
+    httpd = HTTPServer(('localhost', 8888), SimpleHTTPRequestHandler)
+    httpd.serve_forever()
+
